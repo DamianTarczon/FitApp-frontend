@@ -14,11 +14,19 @@ export default function JoinFormStep4() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
 
+  function toggleAllergens(event: any, name: string){
+    const allergentTileClass = event.currentTarget.classList.length > 1 ? event.currentTarget.classList[0] : `${event.currentTarget.className} allergen--border`;
+    event.currentTarget.className = allergentTileClass;
+    dispatch(setAllergens(name));
+  }
+
   const allergensTiles = allergensData.map(allergen => {
     return (
       <AllergenTile
+        key={allergen.id}
         img={allergen.img}
         name={allergen.name}
+        handleClick={toggleAllergens}
       />
     )
   })
