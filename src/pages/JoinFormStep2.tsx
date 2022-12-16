@@ -16,7 +16,7 @@ export default function JoinFormStep2() {
 
   const pictureWithText = <div>Tutaj będzie zdjęcie i tekst</div>
   const basicForm = 
-  <div>
+  <div className='form--div'>
     <form>
       <input 
         type='text'

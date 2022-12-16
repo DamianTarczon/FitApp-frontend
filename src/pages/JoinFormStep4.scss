@@ -1,0 +1,24 @@
+.allergens--div{
+    text-align: center;
+    .container{
+        width: 60%;
+        margin: auto;
+        .allergen--tile{
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: #F8F8FF;
+            margin: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+    }
+    button{
+        padding: 10px;
+        border-radius: 20px;
+        width: 20%;
+        cursor: pointer;
+        background-color: #4B0082;
+        color: white;
+    }
+}
