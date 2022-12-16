@@ -8,7 +8,7 @@ import JoinFormStep4 from './pages/JoinFormStep4';
 import JoinFormStep5 from './pages/JoinFormStep5';
 import JoinFormStep6 from './pages/JoinFormStep6';
 import Home from './pages/Home';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
