@@ -1,8 +1,6 @@
-import React from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useAppDispatch } from '../app/hooks';
 import {
-  setAllergens,
-  selectForm,
+  setAllergens
 } from './JoinFormSlice';
 import BigTile from '../components/BigTile';
 import './JoinFormStep4.scss';
@@ -11,11 +9,10 @@ import allergensData from '../data/AllergensData';
 import Tile from '../components/Tile';
 
 export default function JoinFormStep4() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
 
   function toggleAllergens(event: any, name: string){
-    const allergentTileClass = event.currentTarget.classList.length > 1 ? event.currentTarget.classList[0] : `${event.currentTarget.className} allergen--border`;
+    const allergentTileClass = event.currentTarget.classList.length > 1 ? event.currentTarget.classList[0] : `${event.currentTarget.className} allergen-border`;
     event.currentTarget.className = allergentTileClass;
     dispatch(setAllergens(name));
   }
@@ -24,7 +21,7 @@ export default function JoinFormStep4() {
     return (
       <Tile
         key={allergen.id}
-        className='allergen--tile'
+        className='allergen-tile'
         img={allergen.img}
         name={allergen.name}
         handleClick={toggleAllergens}
@@ -40,7 +37,7 @@ export default function JoinFormStep4() {
   </div>
 
   const alergensForm = 
-  <div className='allergens--div'>
+  <div className='allergens-div'>
     <h2>WYBIERZ ALERGENY</h2>
     <div className='container'>
       {allergensTiles}

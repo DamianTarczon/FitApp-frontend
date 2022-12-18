@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
   setNumberOfMeals,
@@ -27,7 +27,7 @@ export default function JoinFormStep6() {
       <Tile
         key={tile.id}
         id={tile.id}
-        className={tile.clicked ? 'meal--tileClicked' : 'meal--tile'}
+        className={tile.clicked ? 'meal-tileClicked' : 'meal-tile'}
         img={tile.img}
         name={[tile.number + (tile.number > 4 ? ' POSIŁKÓW' : ' POSIŁKI')]}
         handleClick={toggleMealsTile}
@@ -36,7 +36,7 @@ export default function JoinFormStep6() {
   })
 
   const pictureWithText = 
-  <div>
+  <div className='meal-info-div'>
     <p>Tutaj będzie zdjęcie</p>
     <h1>{form.form.numberOfMeals ? form.form.numberOfMeals : 'Wybierz ile posiłków chcesz mieć w ciągu dnia'}</h1>
     <h4>Mam dużo czasu i chcę próbować nowych rzeczy</h4>
@@ -44,7 +44,7 @@ export default function JoinFormStep6() {
   </div>
 
   const mealsForm = 
-  <div className='meals--div'>
+  <div className='meal-tiles-div'>
     <h2>LICZBA POSIŁKÓW</h2>
     <div className='container'>
       {numberOfMealsTiles}

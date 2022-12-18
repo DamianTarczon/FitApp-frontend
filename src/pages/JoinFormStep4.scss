@@ -1,11 +1,11 @@
-.allergens--div{
+.allergens-div{
     text-align: center;
     min-width: 500px;
     max-height: 100vh;
     .container{
         width: 60%;
         margin: auto;
-        .allergen--tile{
+        .allergen-tile{
             display: inline-block;
             width: 150px;
             height: 150px;
@@ -14,7 +14,7 @@
             vertical-align: middle;
             cursor: pointer;
         }
-        .allergen--tile:hover{
+        .allergen-tile:hover{
             box-shadow: 0 0 0 2px #4B0082;
         }
     }
@@ -29,6 +29,6 @@
     }
 }
 
-.allergen--border{
+.allergen-border{
     box-shadow: 0 0 0 2px #4B0082;
 }

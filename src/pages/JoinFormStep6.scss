@@ -1,11 +1,11 @@
-.meals--div{
+.meal-tiles-div{
     text-align: center;
     max-height: 100vh;
     .container{
         width: 60%;
         margin: auto;
         display: inline;
-        .meal--tile{
+        .meal-tile{
             display: inline-block;
             width: 150px;
             height: 150px;
@@ -14,24 +14,26 @@
             vertical-align: middle;
             cursor: pointer;
         }
-        .meal--tile:hover{
+        .meal-tile:hover{
             background-color: white;
             color: orange;
         }
     }
     
 }
-button{
-    padding: 10px;
-    border-radius: 20px;
-    width: 20%;
-    cursor: pointer;
-    background-color: #4B0082;
-    color: white;
-    min-width: 70px;
+.meal-info-div{
+    button{
+        padding: 10px;
+        border-radius: 20px;
+        width: 20%;
+        cursor: pointer;
+        background-color: #4B0082;
+        color: white;
+        min-width: 70px;
+    }
 }
 
-.meal--tileClicked{
+.meal-tileClicked{
     display: inline-block;
     width: 150px;
     height: 150px;
