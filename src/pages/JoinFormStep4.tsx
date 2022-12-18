@@ -8,7 +8,7 @@ import BigTile from '../components/BigTile';
 import './JoinFormStep4.scss';
 import { Link } from "react-router-dom";
 import allergensData from '../data/AllergensData';
-import AllergenTile from '../components/AllergenTile';
+import Tile from '../components/Tile';
 
 export default function JoinFormStep4() {
   const form = useAppSelector(selectForm);
@@ -22,8 +22,9 @@ export default function JoinFormStep4() {
 
   const allergensTiles = allergensData.map(allergen => {
     return (
-      <AllergenTile
+      <Tile
         key={allergen.id}
+        className='allergen--tile'
         img={allergen.img}
         name={allergen.name}
         handleClick={toggleAllergens}
