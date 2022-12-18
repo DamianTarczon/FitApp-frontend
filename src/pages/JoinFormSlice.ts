@@ -65,9 +65,13 @@ export const joinFormSlice = createSlice({
        if (state.form.allergens.includes(action.payload)) {
         state.form.allergens.splice(state.form.allergens.indexOf(action.payload), 1)
        }
-       else {
-        state.form.allergens.push(action.payload)
+       else if(action.payload === 'NIE POSIADAM' || state.form.allergens.includes('NIE POSIADAM')) {
+        state.form.allergens.splice(0, state.form.allergens.length);
+        state.form.allergens.push(action.payload);
+       } else {
+        state.form.allergens.push(action.payload);
        }
+
     },
     setActivityLevel: (state, action: PayloadAction<string>) => {
         state.form.activityLevel = action.payload;

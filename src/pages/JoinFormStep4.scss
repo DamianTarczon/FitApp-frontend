@@ -29,6 +29,13 @@
     }
 }
 
-.allergen-border{
-    box-shadow: 0 0 0 2px #4B0082;
+.allergen-clicked{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: #4B0082;
+    color: white;
+    margin: 10px;
+    vertical-align: middle;
+    cursor: pointer;
 }
