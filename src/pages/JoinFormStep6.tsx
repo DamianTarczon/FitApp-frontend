@@ -17,7 +17,7 @@ export default function JoinFormStep6() {
 
 
   function toggleMealsTile(event: any, name: string){
-    const newMealTiles = mealTiles.map(tile => ({...tile, clicked: tile.id == event.currentTarget.id ? true : false}))
+    const newMealTiles = mealTiles.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
     setTiles(newMealTiles)
     dispatch(setNumberOfMeals(name));
   }
