@@ -1,4 +1,5 @@
 import React from "react"
+import './Tile.scss'
 
 export default function Tile(props: any) {
     return (
