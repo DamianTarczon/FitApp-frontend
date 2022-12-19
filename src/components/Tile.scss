@@ -1,0 +1,24 @@
+.tile{
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    background-color: #F8F8FF;
+    margin: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.tile:hover{
+    box-shadow: 0 0 0 2px #4B0082;
+}
+
+.selected {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    background-color: #4B0082;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}

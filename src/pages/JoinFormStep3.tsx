@@ -1,33 +1,50 @@
-import React from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
+import React, {useState} from 'react';
 import {
-  setGender,
   selectForm,
   setDietType,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep3.scss';
-import { Link } from "react-router-dom";
-import DietsData from '../data/DietsData'; 
+import DietsData from '../data/DietsData';
+import DescriptionTile from '../components/DescriptionTile';
+import Tile from '../components/Tile';
 
 export default function JoinFormStep3() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
+  const [dietsData, setDietsData] = useState(DietsData);
 
-  const diets = DietsData.map(diet => 
-    {return <button 
-      onClick={() => dispatch(setDietType(diet))}>{diet.shortTitle}
-      </button>})
 
-  const description = <div className="diet-description">
-    <h2>{form.dietDescription.title}</h2>
-    <p>{form.dietDescription.description}</p>
-    <Link to="/join-form-step-4"><button>Przejdź dalej</button></Link>
-    </div>
+  function toggle(event: any, name: string){
+    const newDietsData = dietsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
+    setDietsData(newDietsData)
+    dispatch(setDietType(name));
+  }
+
+  const dietsTiles = dietsData.map(tile => {
+    return (
+      <Tile
+        key={tile.id}
+        id={tile.id}
+        className={tile.clicked ? 'tile selected' : 'tile'}
+        img={tile.img}
+        name={tile.name}
+        handleClick={toggle}
+      />
+    )
+  })
+
+  const description = <DescriptionTile  title={form.dietDescription.title}
+                                        description={form.dietDescription.description}
+                                        url='/join-form-step-4'
+                                        buttonText='Przejdź dalej' />
+
+    
 
   return (
     <div className="form-container">
-      <BigTile content={diets} color="#f8bb4b"/>
+      <BigTile content={dietsTiles} color="#f8bb4b"/>
       <BigTile content={description} color="#ffffff"/>
     </div>
   );

@@ -24,7 +24,7 @@ const initialState: JoinFormState = {
     age: '',
     height: '',
     weight: '',
-    dietType: 'reduction',
+    dietType: 'Reukcyjna',
     allergens: [],
     activityLevel: '',
     numberOfMeals: '',
@@ -56,10 +56,10 @@ export const joinFormSlice = createSlice({
     setWeight: (state, action: PayloadAction<string>) => {
         state.form.weight = action.payload;
     },
-    setDietType: (state, action: PayloadAction<{id: number, shortTitle: string,longTitle: string, description: string}>) => {
-        state.form.dietType = action.payload.shortTitle;
-        state.dietDescription.title =  action.payload.longTitle
-        state.dietDescription.description = action.payload.description
+    setDietType: (state, action: PayloadAction<string>) => {
+        state.form.dietType = action.payload;
+        state.dietDescription.title =  'Dieta ' + action.payload;
+        state.dietDescription.description = 'Dieta ' + action.payload + ' opis'
     },
     setAllergens: (state, action: PayloadAction<string>) => {
        if (state.form.allergens.includes(action.payload)) {
