@@ -1,0 +1,41 @@
+.diseases-div{
+    text-align: center;
+    min-width: 500px;
+    max-height: 100vh;
+    .container{
+        width: 70%;
+        margin: auto;
+        .disease-tile{
+            display:inline-block;
+            width: 200px;
+            height: 70px;
+            background-color: #F8F8FF;
+            margin: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+        .disease-tile:hover{
+            box-shadow: 0 0 0 2px #4B0082;
+        }
+    }
+    button{
+        padding: 10px;
+        border-radius: 20px;
+        width: 20%;
+        cursor: pointer;
+        background-color: #4B0082;
+        color: white;
+        min-width: 70px;
+    }
+}
+
+.disease-clicked{
+    display: inline-block;
+    width: 200px;
+    height: 70px;
+    background-color: #4B0082;
+    color: white;
+    margin: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+}
