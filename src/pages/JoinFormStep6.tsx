@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useAppDispatch } from '../app/hooks';
 import {
-  setNumberOfMeals,
-  selectForm,
+  setNumberOfMeals
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
@@ -12,7 +11,6 @@ import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep6() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [mealData, setTiles] = useState(mealsData);
 

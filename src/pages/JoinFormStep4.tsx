@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../app/hooks';
 import {
-  setAllergens,
-  selectForm,
+  setAllergens
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import allergensData from '../data/AllergensData';
 import Tile from '../components/Tile';
+import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep4() {
   const dispatch = useAppDispatch();
@@ -19,9 +19,9 @@ export default function JoinFormStep4() {
     img: string,
     name: string,
     clicked: boolean
-}
+  }
 
-  function toggleAllergens(event: any, name: string){
+  function toggleAllergens(event: React.ChangeEvent<HTMLInputElement>, name: string){
     let newAllergenData: AllergenDataProps[];
     if(name === 'NIE POSIADAM'){
       newAllergenData = allergenData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))
@@ -45,12 +45,13 @@ export default function JoinFormStep4() {
     )
   })
 
-  const pictureWithText = 
-  <div>
-    <h1>Alergie</h1>
-    <p>Zdjecie</p>
-    <h4>Czy cierpisz na alergie pokarmowe?</h4>
-  </div>
+  const description = <DescriptionTile 
+    title='ALERGIE'
+    description='Czy cierpisz na alergie pokarmowe?'
+    img='Zdjecie'
+    imgPosition='middle'
+  />
+  
 
   const alergensForm = 
   <div className="tiles-form">
@@ -61,7 +62,7 @@ export default function JoinFormStep4() {
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="orange"/>
+      <BigTile content={description} color="orange"/>
       <BigTile content={alergensForm} color="white"/>
     </div>
   );
