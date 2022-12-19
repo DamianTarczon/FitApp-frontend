@@ -26,7 +26,7 @@ export default function JoinFormStep2() {
             [event.target.name]: event.target.value
         }
     })
-}
+  }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void{
     event.preventDefault()
