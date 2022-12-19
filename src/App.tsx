@@ -7,6 +7,8 @@ import JoinFormStep4 from './pages/JoinFormStep4';
 import JoinFormStep5 from './pages/JoinFormStep5';
 import JoinFormStep6 from './pages/JoinFormStep6';
 import JoinFormStep7 from './pages/JoinFormStep7';
+
+import JoinFormStep9 from './pages/JoinFormStep9';
 import Home from './pages/Home';
 import './App.scss';
 
@@ -22,6 +24,8 @@ function App() {
         <Route path="/join-form-step-5" element={<JoinFormStep5 />}/>
         <Route path="/join-form-step-6" element={<JoinFormStep6 />}/>
         <Route path="/join-form-step-7" element={<JoinFormStep7 />}/>
+
+        <Route path="/join-form-step-9" element={<JoinFormStep9 />}/>
       </Routes>
     </BrowserRouter>
   );

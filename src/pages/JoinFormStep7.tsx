@@ -59,7 +59,7 @@ export default function JoinFormStep7() {
     <div className='container'>
       {notLikedProductsTiles}
     </div>
-    <Link to='/join-form-step-5'><button>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-9'><button>Przejdź dalej</button></Link>
   </div>
 
   return (

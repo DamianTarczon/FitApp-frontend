@@ -30,6 +30,12 @@ export default function Home() {
           <li>
             <Link to="/join-form-step-7">Step 7</Link>
           </li>
+
+
+
+          <li>
+            <Link to="/join-form-step-9">Step 9</Link>
+          </li>
         </ul>
       </nav>
 

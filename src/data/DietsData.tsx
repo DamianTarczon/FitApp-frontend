@@ -1,38 +1,38 @@
 export default [
     {
         id: 1,
-        shortTitle: 'Redukcyjna',
-        longTitle: 'Dieta Redukcyjna',
-        description: 'Dieta Redukcyjna Opis'
+        name: 'Redukcyjna',
+        img: 'redukcyjna',
+        clicked: true,
     },
     {
         id: 2,
-        shortTitle: 'Sportowa',
-        longTitle: 'Dieta Sportowa',
-        description: 'Dieta Sportowa Opis'
+        name: 'Sportowa',
+        img: 'sportowa',
+        clicked: false,
     },
     {
         id: 3,
-        shortTitle: 'Wege',
-        longTitle: 'Dieta Wege',
-        description: 'Dieta Wege Opis'
+        name: 'Wege',
+        img: 'wege',
+        clicked: false,
     },
     {
         id: 4,
-        shortTitle: 'Fit Mama',
-        longTitle: 'Dieta Fit Mama',
-        description: 'Dieta Fit Mama Opis'
+        name: 'Fit Mama',
+        img: 'fit mama',
+        clicked: false,
     },
     {
         id: 5,
-        shortTitle: 'Masa',
-        longTitle: 'Dieta Masa',
-        description: 'Dieta Masa Opis'
+        name: 'Masa',
+        img: 'masa',
+        clicked: false,
     },
     {
         id: 6,
-        shortTitle: 'Codzienna',
-        longTitle: 'Dieta Codzienna',
-        description: 'Dieta Codzienna Opis'
+        name: 'Codzienna',
+        img: 'codzienna',
+        clicked: false,
     },
 ]
