@@ -35,10 +35,14 @@ export default function JoinFormStep3() {
     )
   })
 
-  const description = <DescriptionTile  title={form.dietDescription.title}
-                                        description={form.dietDescription.description}
-                                        url='/join-form-step-4'
-                                        buttonText='Przejdź dalej' />
+  const description = dietsData
+  .filter(data => data.clicked)
+  .map(data => {
+    return <DescriptionTile key={data.id} title={data.title}
+    description={data.description}
+    url='/join-form-step-4'
+    buttonText='Przejdź dalej' />
+  });
 
     
 

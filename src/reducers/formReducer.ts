@@ -13,10 +13,6 @@ export interface JoinFormState {
     numberOfMeals: string,
     notLikedProducts: string[],
     disease: string[]},
-    dietDescription: {
-        title: string,
-        description: string,
-    } 
 }
 
 const initialState: JoinFormState = {
@@ -30,10 +26,6 @@ const initialState: JoinFormState = {
     numberOfMeals: '',
     notLikedProducts: [],
     disease: []},
-    dietDescription: {
-        title: 'Dieta Redukcyjna',
-        description: 'Dieta Redukcyjna opis',
-    } 
 };
 
 
@@ -58,8 +50,6 @@ export const joinFormSlice = createSlice({
     },
     setDietType: (state, action: PayloadAction<string>) => {
         state.form.dietType = action.payload;
-        state.dietDescription.title =  'Dieta ' + action.payload;
-        state.dietDescription.description = 'Dieta ' + action.payload + ' opis'
     },
     setAllergens: (state, action: PayloadAction<string>) => {
        if (state.form.allergens.includes(action.payload)) {
