@@ -9,15 +9,13 @@ import JoinFormStep6 from './pages/JoinFormStep6';
 import JoinFormStep7 from './pages/JoinFormStep7';
 import JoinFormStep8 from './pages/JoinFormStep8';
 import JoinFormStep9 from './pages/JoinFormStep9';
-import Home from './pages/Home';
 import './App.scss';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/join-form-step-1" element={<JoinFormStep1 />}/>
+        <Route index element={<JoinFormStep1 />}/>
         <Route path="/join-form-step-2" element={<JoinFormStep2 />}/>
         <Route path="/join-form-step-3" element={<JoinFormStep3 />}/>
         <Route path="/join-form-step-4" element={<JoinFormStep4 />}/>
