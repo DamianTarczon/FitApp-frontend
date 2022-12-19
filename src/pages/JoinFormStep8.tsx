@@ -17,7 +17,7 @@ export default function JoinFormStep8() {
     id: number
     name: string,
     clicked: boolean
-}
+  }
 
   function toggleDiseases(event: any, name: string){
     let newDiseaseData: DiseaseDataProps[];
@@ -36,6 +36,7 @@ export default function JoinFormStep8() {
         key={disease.id}
         id={disease.id}
         className={disease.clicked ? 'disease-clicked' : 'disease-tile'}
+        img=''
         name={disease.name}
         handleClick={toggleDiseases}
       />

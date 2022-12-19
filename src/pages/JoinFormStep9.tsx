@@ -11,6 +11,8 @@ export default function JoinFormStep9() {
   const allergensList = form.form.allergens.map(a => a + ', ')
 
   const notLikedProductsList = form.form.notLikedProducts.map(a => a + ', ')
+  
+  const diseasesList = form.form.disease.map(a => a + ', ')
 
   return (
     <div className="form-results">
@@ -23,7 +25,7 @@ export default function JoinFormStep9() {
       <p>Poziom aktywności: {form.form.activityLevel}</p>
       <p>Liczba posiłków: {form.form.numberOfMeals}</p>
       <p>Niechciane produkty: {notLikedProductsList}</p>
-      <p>Choroby: {form.form.disease}</p>
+      <p>Choroby: {diseasesList}</p>
     </div>
   );
 }

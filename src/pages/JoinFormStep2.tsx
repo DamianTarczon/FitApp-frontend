@@ -20,7 +20,7 @@ export default function JoinFormStep2() {
     weight: ''
   })
 
-  function handleChange(event: any): void {
+  function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
     setBasicInfo(prevFormData => {
         return {
             ...prevFormData,
@@ -29,7 +29,7 @@ export default function JoinFormStep2() {
     })
 }
 
-  function handleSubmit(event: any): void{
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>): void{
     event.preventDefault()
     dispatch(setAge(basicInfo.age))
     dispatch(setHeight(basicInfo.height))

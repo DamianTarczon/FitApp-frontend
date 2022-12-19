@@ -72,10 +72,13 @@ export const joinFormSlice = createSlice({
     setNotLikedProducts: (state, action: PayloadAction<string>) => {
         if (state.form.notLikedProducts.includes(action.payload)) {
             state.form.notLikedProducts.splice(state.form.notLikedProducts.indexOf(action.payload), 1)
-           }
-           else {
+        }
+        else if (action.payload === 'Nie posiadam' || state.form.disease.includes('Nie posiadam')){
+            state.form.disease.splice(0, state.form.disease.length);
             state.form.notLikedProducts.push(action.payload)
-           }
+        } else {
+            state.form.notLikedProducts.push(action.payload)
+        }
     },
     setDiseases: (state, action: PayloadAction<string>) => {
         if (state.form.disease.includes(action.payload)) {

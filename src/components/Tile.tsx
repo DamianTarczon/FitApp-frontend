@@ -1,9 +1,17 @@
 import React from "react"
 import './Tile.scss'
 
-export default function Tile(props: any) {
+interface TileProps {
+    id: number,
+    className: string,
+    img: string,
+    name: string,
+    handleClick: any
+}
+
+export default function Tile(props: TileProps) {
     return (
-        <div id={props.id} className={props.className} onClick={(e) => props.handleClick(e, props.name)}>
+        <div id={props.id.toString()} className={props.className} onClick={(e) => props.handleClick(e, props.name)}>
             {props.img ? <img src={props.img} alt='img'/> : null}
             <p>{props.name}</p>
         </div>
