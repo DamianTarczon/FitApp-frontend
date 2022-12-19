@@ -62,8 +62,8 @@ export default function JoinFormStep4() {
 
   return (
     <div className="form-container">
-      <BigTile content={description} color="orange"/>
-      <BigTile content={alergensForm} color="white"/>
+      <BigTile content={description} color="#f8bb4b"/>
+      <BigTile content={alergensForm} color="#ffffff"/>
     </div>
   );
 }

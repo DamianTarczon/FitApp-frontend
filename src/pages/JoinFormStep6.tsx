@@ -55,8 +55,8 @@ const description = mealData
 
   return (
     <div className="form-container">
-      <BigTile content={mealsForm} color="orange"/>
-      <BigTile content={description} color="white"/>
+      <BigTile content={mealsForm} color="#f8bb4b"/>
+      <BigTile content={description} color="#ffffff"/>
     </div>
   );
 }

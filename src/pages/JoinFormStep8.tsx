@@ -60,8 +60,8 @@ export default function JoinFormStep8() {
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="orange"/>
-      <BigTile content={diseasesForm} color="white"/>
+      <BigTile content={pictureWithText} color="#f8bb4b"/>
+      <BigTile content={diseasesForm} color="#ffffff"/>
     </div>
   );
 }
