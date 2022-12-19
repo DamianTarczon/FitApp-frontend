@@ -1,23 +1,27 @@
-.allergens-div{
+.meal-tiles-div{
     text-align: center;
-    min-width: 500px;
     max-height: 100vh;
     .container{
         width: 60%;
         margin: auto;
-        .allergen-tile{
+        display: inline;
+        .meal-tile{
             display: inline-block;
             width: 150px;
             height: 150px;
-            background-color: #F8F8FF;
+            color: white;
             margin: 10px;
             vertical-align: middle;
             cursor: pointer;
         }
-        .allergen-tile:hover{
-            box-shadow: 0 0 0 2px #4B0082;
+        .meal-tile:hover{
+            background-color: white;
+            color: orange;
         }
     }
+    
+}
+.meal-info-div{
     button{
         padding: 10px;
         border-radius: 20px;
@@ -29,12 +33,12 @@
     }
 }
 
-.allergen-clicked{
+.meal-tileClicked{
     display: inline-block;
     width: 150px;
     height: 150px;
-    background-color: #4B0082;
-    color: white;
+    color: orange;
+    background-color: white;
     margin: 10px;
     vertical-align: middle;
     cursor: pointer;

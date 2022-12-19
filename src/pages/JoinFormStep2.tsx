@@ -1,5 +1,6 @@
-import React from 'react';
+import { useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useNavigate } from "react-router-dom"
 import {
   setAge,
   setHeight,
@@ -8,33 +9,68 @@ import {
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep2.scss';
-import { Link } from "react-router-dom";
 
 export default function JoinFormStep2() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate()
+  const[basicInfo, setBasicInfo] = useState({
+    age: '',
+    height: '',
+    weight: ''
+  })
+
+  function handleChange(event: any): void {
+    setBasicInfo(prevFormData => {
+        return {
+            ...prevFormData,
+            [event.target.name]: event.target.value
+        }
+    })
+}
+
+  function handleSubmit(event: any): void{
+    event.preventDefault()
+    dispatch(setAge(basicInfo.age))
+    dispatch(setHeight(basicInfo.height))
+    dispatch(setWeight(basicInfo.weight))
+    navigate("/join-form-step-3")
+  }
 
   const pictureWithText = <div>Tutaj będzie zdjęcie i tekst</div>
   const basicForm = 
-  <div className='form--div'>
-    <form>
+  <div className='form-div'>
+    <form onSubmit={handleSubmit}>
       <input 
         type='text'
         placeholder='Wiek'
-        onChange={(e) => dispatch(setAge(e.target.value))}
+        name='age'
+        value={basicInfo.age}
+        onChange={handleChange}
+        pattern="\d*"
+        required
       />
       <input 
         type='text'
-        placeholder='Wzrost'
-        onChange={(e) => dispatch(setHeight(e.target.value))}
+        placeholder='Wzrost(cm)'
+        name='height'
+        value={basicInfo.height}
+        onChange={handleChange}
+        pattern="\d*"
+        required
       />
       <input 
         type='text'
-        placeholder='Waga'
-        onChange={(e) => dispatch(setWeight(e.target.value))}
+        placeholder='Waga(kg)'
+        name='weight'
+        value={basicInfo.weight}
+        onChange={handleChange}
+        pattern="\d*"
+        required
       />
+      <button>Przejdź dalej</button>
     </form>
-    <Link to='/join-form-step-3'><button>Przejdź dalej</button></Link>
+    
   </div>
 
   return (
