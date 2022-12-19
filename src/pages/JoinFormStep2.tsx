@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useAppDispatch } from '../app/hooks';
 import { useNavigate } from "react-router-dom"
 import {
   setAge,
   setHeight,
-  setWeight,
-  selectForm,
+  setWeight
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep2.scss';
+import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep2() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const navigate = useNavigate()
   const[basicInfo, setBasicInfo] = useState({
@@ -37,7 +36,15 @@ export default function JoinFormStep2() {
     navigate("/join-form-step-3")
   }
 
-  const pictureWithText = <div>Tutaj będzie zdjęcie i tekst</div>
+  const description = <DescriptionTile
+    title = 'ZACZYNAJMY!'
+    description='To niezwykle ważne!
+    Na podstawie twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki,
+    określić dietę, itp.'
+    img='zdjecie'
+    imgPosition='top'
+  />
+
   const basicForm = 
   <div className='form-div'>
     <form onSubmit={handleSubmit}>
@@ -70,12 +77,11 @@ export default function JoinFormStep2() {
       />
       <button>Przejdź dalej</button>
     </form>
-    
   </div>
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="orange"/>
+      <BigTile content={description} color="orange"/>
       <BigTile content={basicForm} color="white"/>
     </div>
   );

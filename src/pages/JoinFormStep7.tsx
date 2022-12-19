@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { useAppDispatch } from '../app/hooks';
 import {
-  setAllergens,
-  selectForm,
   setNotLikedProducts,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
@@ -23,7 +21,7 @@ export default function JoinFormStep7() {
     clicked: boolean
 }
 
-  function toggle(event: any, name: string){
+  function toggle(event: React.ChangeEvent<HTMLInputElement>, name: string){
     let newNotLikedProductsData: NotLikedProductsDataProps[];
     if(name === 'Nie posiadam'){
       newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))

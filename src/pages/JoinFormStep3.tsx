@@ -1,7 +1,6 @@
-import { useAppSelector, useAppDispatch } from '../app/hooks';
-import React, {useState} from 'react';
+import { useAppDispatch } from '../app/hooks';
+import {useState} from 'react';
 import {
-  selectForm,
   setDietType,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
@@ -12,12 +11,11 @@ import Tile from '../components/Tile';
 import { Link } from "react-router-dom";
 
 export default function JoinFormStep3() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [dietsData, setDietsData] = useState(DietsData);
 
 
-  function toggle(event: any, name: string){
+  function toggle(event: React.ChangeEvent<HTMLInputElement>, name: string){
     const newDietsData = dietsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
     setDietsData(newDietsData)
     dispatch(setDietType(name));

@@ -1,9 +1,6 @@
-import React, {useState} from 'react';
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import {useState} from 'react';
+import { useAppDispatch } from '../app/hooks';
 import {
-  setGender,
-  selectForm,
-  setDietType,
   setActivityLevel,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
@@ -14,12 +11,11 @@ import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep5() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [activityTilesData, setActivityTilesData] = useState(ActivityData);
 
 
-  function toggleActivityTile(event: any, name: string){
+  function toggleActivityTile(event: React.ChangeEvent<HTMLInputElement>, name: string){
     const newActivityTiles = activityTilesData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
     setActivityTilesData(newActivityTiles)
     dispatch(setActivityLevel(name));
