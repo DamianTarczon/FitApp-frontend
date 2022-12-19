@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../app/hooks';
+import { useAppDispatch,useAppSelector } from '../app/hooks';
 import {
   setNotLikedProducts,
+  selectForm
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
@@ -11,6 +12,7 @@ import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep7() {
+  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [notLikedProductsData, setNotLikedProductsData] = useState(NotLikedProductsData);
 
@@ -23,10 +25,10 @@ export default function JoinFormStep7() {
 
   function toggle(event: React.ChangeEvent<HTMLInputElement>, name: string){
     let newNotLikedProductsData: NotLikedProductsDataProps[];
-    if(name === 'Nie posiadam'){
+    if(name === 'NIE POSIADAM'){
       newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))
     } else {
-      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.name === 'Nie posiadam' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
+      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.name === 'NIE POSIADAM' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
     }
     setNotLikedProductsData(newNotLikedProductsData);
     dispatch(setNotLikedProducts(name));
@@ -59,7 +61,7 @@ imgPosition='middle' />
     <div className='tiles-container'>
       {notLikedProductsTiles}
     </div>
-    <Link to='/join-form-step-8'><button>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-8'><button disabled={form.form.notLikedProducts.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (

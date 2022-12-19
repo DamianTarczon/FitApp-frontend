@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../app/hooks';
+import { useAppDispatch,useAppSelector } from '../app/hooks';
 import {
-  setAllergens
+  setAllergens,
+  selectForm
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
@@ -11,6 +12,7 @@ import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep4() {
+  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [allergenData, setAllergenData] = useState(allergensData);
 
@@ -57,7 +59,7 @@ export default function JoinFormStep4() {
   <div className="tiles-form">
     <h2>WYBIERZ ALERGENY</h2>
       <div className="tiles-container">{allergensTiles}</div>
-    <Link to='/join-form-step-5'><button>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-5'><button disabled={form.form.allergens.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (

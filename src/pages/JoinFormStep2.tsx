@@ -1,16 +1,18 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../app/hooks';
+import { useAppDispatch,useAppSelector } from '../app/hooks';
 import { useNavigate } from "react-router-dom"
 import {
   setAge,
   setHeight,
-  setWeight
+  setWeight,
+  selectForm
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
 import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep2() {
+  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const navigate = useNavigate()
   const[basicInfo, setBasicInfo] = useState({
@@ -30,9 +32,9 @@ export default function JoinFormStep2() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void{
     event.preventDefault()
-    dispatch(setAge(basicInfo.age))
-    dispatch(setHeight(basicInfo.height))
-    dispatch(setWeight(basicInfo.weight))
+    //dispatch(setAge(basicInfo.age))
+    //dispatch(setHeight(basicInfo.height))
+    //dispatch(setWeight(basicInfo.weight))
     navigate("/join-form-step-3")
   }
 
@@ -52,8 +54,8 @@ export default function JoinFormStep2() {
         type='text'
         placeholder='Wiek'
         name='age'
-        value={basicInfo.age}
-        onChange={handleChange}
+        value={form.form.age}
+        onChange={(e) => dispatch(setAge(e.target.value))}
         pattern="\d*"
         required
       />
@@ -61,8 +63,8 @@ export default function JoinFormStep2() {
         type='text'
         placeholder='Wzrost(cm)'
         name='height'
-        value={basicInfo.height}
-        onChange={handleChange}
+        value={form.form.height}
+        onChange={(e) => dispatch(setHeight(e.target.value))}
         pattern="\d*"
         required
       />
@@ -70,8 +72,8 @@ export default function JoinFormStep2() {
         type='text'
         placeholder='Waga(kg)'
         name='weight'
-        value={basicInfo.weight}
-        onChange={handleChange}
+        value={form.form.weight}
+        onChange={(e) => dispatch(setWeight(e.target.value))}
         pattern="\d*"
         required
       />

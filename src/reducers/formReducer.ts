@@ -22,8 +22,8 @@ const initialState: JoinFormState = {
     weight: '',
     dietType: 'Reukcyjna',
     allergens: [],
-    activityLevel: '',
-    numberOfMeals: '',
+    activityLevel: 'Niska',
+    numberOfMeals: '5 POSIŁKÓW',
     notLikedProducts: [],
     disease: []},
 };
@@ -73,7 +73,7 @@ export const joinFormSlice = createSlice({
         if (state.form.notLikedProducts.includes(action.payload)) {
             state.form.notLikedProducts.splice(state.form.notLikedProducts.indexOf(action.payload), 1)
         }
-        else if (action.payload === 'Nie posiadam' || state.form.disease.includes('Nie posiadam')){
+        else if (action.payload === 'NIE POSIADAM' || state.form.disease.includes('NIE POSIADAM')){
             state.form.disease.splice(0, state.form.disease.length);
             state.form.notLikedProducts.push(action.payload)
         } else {

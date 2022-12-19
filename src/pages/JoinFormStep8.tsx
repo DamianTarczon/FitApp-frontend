@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { useAppDispatch } from '../app/hooks';
+import { useAppDispatch,useAppSelector } from '../app/hooks';
 import {
-  setDiseases
+  setDiseases,
+  selectForm
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
@@ -10,6 +11,7 @@ import diseasesData from '../data/DiseasesData';
 import Tile from '../components/Tile';
 
 export default function JoinFormStep8() {
+  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const [diseaseData, setDiseaseData] = useState(diseasesData);
 
@@ -55,7 +57,7 @@ export default function JoinFormStep8() {
     <div className='tiles-container'>
       {diseasesTiles}
     </div>
-    <Link to='/join-form-step-9'><button>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-9'><button disabled={form.form.disease.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (
