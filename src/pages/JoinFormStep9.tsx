@@ -12,7 +12,7 @@ export default function JoinFormStep9() {
 
   return (
     <div className="form-results">
-      <pre>{JSON.stringify(form.form,null, 2)}</pre>
+      <pre>{JSON.stringify(form,null, 2)}</pre>
       <Link to="/">Start over</Link>
     </div>
   );

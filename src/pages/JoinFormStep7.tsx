@@ -61,7 +61,7 @@ imgPosition='middle' />
     <div className='tiles-container'>
       {notLikedProductsTiles}
     </div>
-    <Link to='/join-form-step-8'><button disabled={form.form.notLikedProducts.length === 0}>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-8'><button disabled={form.notLikedProducts.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (

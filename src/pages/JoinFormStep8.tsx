@@ -9,6 +9,7 @@ import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import diseasesData from '../data/DiseasesData';
 import Tile from '../components/Tile';
+import DescriptionTile from '../components/DescriptionTile'
 
 export default function JoinFormStep8() {
   const form = useAppSelector(selectForm);
@@ -45,11 +46,11 @@ export default function JoinFormStep8() {
     )
   })
 
-  const pictureWithText = 
-  <div>
-    <h1>Choroby</h1>
-    <p>Zdjecie</p>
-  </div>
+  const description = 
+  <DescriptionTile title='Choroby'
+  description=''
+  img='zdjecie'
+  imgPosition='down' />
 
   const diseasesForm = 
   <div className='tiles-form'>
@@ -57,12 +58,12 @@ export default function JoinFormStep8() {
     <div className='tiles-container'>
       {diseasesTiles}
     </div>
-    <Link to='/join-form-step-9'><button disabled={form.form.disease.length === 0}>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-9'><button disabled={form.diseases.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="#f8bb4b"/>
+      <BigTile content={description} color="#f8bb4b"/>
       <BigTile content={diseasesForm} color="#ffffff"/>
     </div>
   );

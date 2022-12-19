@@ -59,7 +59,7 @@ export default function JoinFormStep4() {
   <div className="tiles-form-allergens">
     <h2>WYBIERZ ALERGENY</h2>
       <div className="tiles-container">{allergensTiles}</div>
-    <Link to='/join-form-step-5'><button disabled={form.form.allergens.length === 0}>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-5'><button disabled={form.allergens.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (
