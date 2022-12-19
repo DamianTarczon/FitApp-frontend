@@ -64,8 +64,8 @@ imgPosition='middle' />
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="orange"/>
-      <BigTile content={notLikedProductsForm} color="white"/>
+      <BigTile content={pictureWithText} color="#f8bb4b"/>
+      <BigTile content={notLikedProductsForm} color="#ffffff"/>
     </div>
   );
 }
