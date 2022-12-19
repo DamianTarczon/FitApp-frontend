@@ -7,7 +7,7 @@ import {
   setActivityLevel,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep3.scss';
+import './JoinFormStep5.scss';
 import { Link } from "react-router-dom";
 import ActivityData from '../data/ActivityData';
 import Tile from '../components/Tile';
@@ -41,10 +41,11 @@ export default function JoinFormStep5() {
   const description = activityTilesData
   .filter(data => data.clicked)
   .map(data => {
-    return <DescriptionTile key={data.id} title={data.name}
+    return <div className='description-container'><DescriptionTile key={data.id} title={data.name}
     description={data.description}
-    url='/join-form-step-6'
-    buttonText='Przejdź dalej' />
+    img='zdjecie'
+    imgPosition='top' />
+    <Link to='/join-form-step-6'><button>Przejdź dalej</button></Link></div>
   });
 
   

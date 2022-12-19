@@ -10,6 +10,7 @@ import './JoinFormStep7.scss';
 import { Link } from "react-router-dom";
 import NotLikedProductsData from '../data/NotLikedProductsData';
 import Tile from '../components/Tile';
+import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep7() {
   const dispatch = useAppDispatch();
@@ -47,11 +48,12 @@ export default function JoinFormStep7() {
   })
 
   const pictureWithText = 
-  <div>
-    <h1>Lubie, nie lubię..</h1>
-    <p>Zdjecie</p>
-    <h4>Najczęściej odrzucane produkty</h4>
-  </div>
+  <DescriptionTile title='Lubie, nie lubię..'
+description='Najczęściej odrzucane produkty'
+img='zdjecie'
+imgPosition='middle' />
+
+
 
   const notLikedProductsForm = 
   <div className='products-div'>
@@ -59,7 +61,7 @@ export default function JoinFormStep7() {
     <div className='container'>
       {notLikedProductsTiles}
     </div>
-    <Link to='/join-form-step-9'><button>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-8'><button>Przejdź dalej</button></Link>
   </div>
 
   return (

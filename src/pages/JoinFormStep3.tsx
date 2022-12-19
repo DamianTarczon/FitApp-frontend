@@ -9,6 +9,7 @@ import './JoinFormStep3.scss';
 import DietsData from '../data/DietsData';
 import DescriptionTile from '../components/DescriptionTile';
 import Tile from '../components/Tile';
+import { Link } from "react-router-dom";
 
 export default function JoinFormStep3() {
   const form = useAppSelector(selectForm);
@@ -38,10 +39,11 @@ export default function JoinFormStep3() {
   const description = dietsData
   .filter(data => data.clicked)
   .map(data => {
-    return <DescriptionTile key={data.id} title={data.title}
+    return <div className='description-container'><DescriptionTile key={data.id} title={data.title}
     description={data.description}
-    url='/join-form-step-4'
-    buttonText='Przejdź dalej' />
+    img='zdjecie'
+    imgPosition='middle' />
+    <Link to='/join-form-step-4'><button>Przejdź dalej</button></Link></div>
   });
 
     

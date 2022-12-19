@@ -13,7 +13,7 @@ export default function JoinFormStep9() {
   const notLikedProductsList = form.form.notLikedProducts.map(a => a + ', ')
 
   return (
-    <div className="form-container">
+    <div className="form-results">
       <p>Płeć: {form.form.gender}</p>
       <p>Wiek: {form.form.age}</p>
       <p>Wzrost: {form.form.height}</p>
