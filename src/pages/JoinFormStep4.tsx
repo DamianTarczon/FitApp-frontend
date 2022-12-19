@@ -39,7 +39,7 @@ export default function JoinFormStep4() {
       <Tile
         key={allergen.id}
         id={allergen.id}
-        className={allergen.clicked ? 'tile selected' : 'tile'}
+        className={allergen.clicked ? 'tile-allergens selected' : 'tile-allergens'}
         img={allergen.img}
         name={allergen.name}
         handleClick={toggleAllergens}
@@ -55,8 +55,8 @@ export default function JoinFormStep4() {
   />
   
 
-  const alergensForm = 
-  <div className="tiles-form">
+  const allergensForm = 
+  <div className="tiles-form-allergens">
     <h2>WYBIERZ ALERGENY</h2>
       <div className="tiles-container">{allergensTiles}</div>
     <Link to='/join-form-step-5'><button disabled={form.form.allergens.length === 0}>Przejdź dalej</button></Link>
@@ -65,7 +65,7 @@ export default function JoinFormStep4() {
   return (
     <div className="form-container">
       <BigTile content={description} color="#f8bb4b"/>
-      <BigTile content={alergensForm} color="#ffffff"/>
+      <BigTile content={allergensForm} color="#ffffff"/>
     </div>
   );
 }
