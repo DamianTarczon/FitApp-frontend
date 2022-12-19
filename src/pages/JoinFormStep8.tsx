@@ -57,7 +57,7 @@ export default function JoinFormStep8() {
     <div className='tiles-container'>
       {diseasesTiles}
     </div>
-    <Link to='/join-form-step-9'><button disabled={form.form.disease.length === 0}>Przejdź dalej</button></Link>
+    <Link to='/join-form-step-9'><button disabled={form.diseases.length === 0}>Przejdź dalej</button></Link>
   </div>
 
   return (

@@ -5,6 +5,7 @@ import {
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
 import { Link } from "react-router-dom";
+import JoinFormStep2 from './JoinFormStep2';
 
 export default function JoinFormStep1() {
   const dispatch = useAppDispatch();

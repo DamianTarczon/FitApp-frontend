@@ -3,7 +3,7 @@ import { RootState } from '../app/store';
 
 
 export interface JoinFormState {
-    form: {gender: string,
+    gender: string,
     age: string,
     height: string,
     weight: string,
@@ -12,11 +12,11 @@ export interface JoinFormState {
     activityLevel: string,
     numberOfMeals: string,
     notLikedProducts: string[],
-    disease: string[]},
+    diseases: string[],
 }
 
 const initialState: JoinFormState = {
-    form: {gender: '',
+    gender: '',
     age: '',
     height: '',
     weight: '',
@@ -25,10 +25,20 @@ const initialState: JoinFormState = {
     activityLevel: 'Niska',
     numberOfMeals: '5 POSIŁKÓW',
     notLikedProducts: [],
-    disease: []},
+    diseases: [],
 };
 
-
+function updateList(list: string[],newElement: string){
+    if (list.includes(newElement)) {
+        list.splice(list.indexOf(newElement), 1)
+       }
+       else if(newElement === 'NIE POSIADAM' || list.includes('NIE POSIADAM')) {
+        list.splice(0, list.length);
+        list.push(newElement);
+       } else {
+        list.push(newElement);
+       }
+}
 
 export const joinFormSlice = createSlice({
   name: 'joinForm',
@@ -37,59 +47,35 @@ export const joinFormSlice = createSlice({
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
     setGender: (state, action: PayloadAction<string>) => {
-      state.form.gender = action.payload;
+      state.gender = action.payload;
     },
     setAge: (state, action: PayloadAction<string>) => {
-        state.form.age = action.payload;
+        state.age = action.payload;
     },
     setHeight: (state, action: PayloadAction<string>) => {
-        state.form.height = action.payload;
+        state.height = action.payload;
     },
     setWeight: (state, action: PayloadAction<string>) => {
-        state.form.weight = action.payload;
+        state.weight = action.payload;
     },
     setDietType: (state, action: PayloadAction<string>) => {
-        state.form.dietType = action.payload;
+        state.dietType = action.payload;
     },
     setAllergens: (state, action: PayloadAction<string>) => {
-       if (state.form.allergens.includes(action.payload)) {
-        state.form.allergens.splice(state.form.allergens.indexOf(action.payload), 1)
-       }
-       else if(action.payload === 'NIE POSIADAM' || state.form.allergens.includes('NIE POSIADAM')) {
-        state.form.allergens.splice(0, state.form.allergens.length);
-        state.form.allergens.push(action.payload);
-       } else {
-        state.form.allergens.push(action.payload);
-       }
+       updateList(state.allergens,action.payload);
 
     },
     setActivityLevel: (state, action: PayloadAction<string>) => {
-        state.form.activityLevel = action.payload;
+        state.activityLevel = action.payload;
     },
     setNumberOfMeals: (state, action: PayloadAction<string>) => {
-        state.form.numberOfMeals = action.payload;
+        state.numberOfMeals = action.payload;
     },
     setNotLikedProducts: (state, action: PayloadAction<string>) => {
-        if (state.form.notLikedProducts.includes(action.payload)) {
-            state.form.notLikedProducts.splice(state.form.notLikedProducts.indexOf(action.payload), 1)
-        }
-        else if (action.payload === 'NIE POSIADAM' || state.form.disease.includes('NIE POSIADAM')){
-            state.form.disease.splice(0, state.form.disease.length);
-            state.form.notLikedProducts.push(action.payload)
-        } else {
-            state.form.notLikedProducts.push(action.payload)
-        }
+        updateList(state.notLikedProducts,action.payload);
     },
     setDiseases: (state, action: PayloadAction<string>) => {
-        if (state.form.disease.includes(action.payload)) {
-            state.form.disease.splice(state.form.disease.indexOf(action.payload), 1)
-        }
-        else if(action.payload === 'NIE POSIADAM' || state.form.disease.includes('NIE POSIADAM')) {
-        state.form.disease.splice(0, state.form.disease.length);
-        state.form.disease.push(action.payload);
-        } else {
-        state.form.disease.push(action.payload);
-        }
+        updateList(state.diseases,action.payload);
     },
     
   },
@@ -97,11 +83,6 @@ export const joinFormSlice = createSlice({
 
 export const { setGender, setAge, setActivityLevel, setAllergens, setDietType, setDiseases, setHeight, setNotLikedProducts, setNumberOfMeals, setWeight } = joinFormSlice.actions;
 
-// The function below is called a selector and allows us to select a value from
-// the state. Selectors can also be defined inline where they're used instead of
-// in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
 export const selectForm = (state: RootState) => state.form;
-
-
 
 export default joinFormSlice.reducer;
