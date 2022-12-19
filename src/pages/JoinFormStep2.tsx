@@ -5,7 +5,7 @@ import {
   setHeight,
   setWeight,
   selectForm,
-} from './JoinFormSlice';
+} from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep2.scss';
 import { Link } from "react-router-dom";

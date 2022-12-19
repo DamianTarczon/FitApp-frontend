@@ -4,20 +4,19 @@ import {
   setGender,
   selectForm,
   setDietType,
-} from './JoinFormSlice';
+} from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep3.scss';
 import { Link } from "react-router-dom";
+import DietsData from '../data/DietsData'; 
 
 export default function JoinFormStep3() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
 
-  const dietsOptions = ['Redukcyjna', 'Sportowa', 'Wege','Fit Mama','Masa','Codzienna']
-
-  const diets = dietsOptions.map(diet => 
+  const diets = DietsData.map(diet => 
     {return <button 
-      onClick={() => dispatch(setDietType(diet))}>{diet}
+      onClick={() => dispatch(setDietType(diet))}>{diet.shortTitle}
       </button>})
 
   const description = <div className="diet-description">

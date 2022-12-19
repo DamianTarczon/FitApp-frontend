@@ -1,10 +1,8 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
-import formReducer from '../pages/JoinFormSlice'
+import formReducer from '../reducers/formReducer'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     form: formReducer
   },
 });

@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Counter } from './features/counter/Counter';
 import JoinFormStep1 from './pages/JoinFormStep1';
 import JoinFormStep2 from './pages/JoinFormStep2';
 import JoinFormStep3 from './pages/JoinFormStep3';
