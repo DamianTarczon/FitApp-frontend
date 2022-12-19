@@ -9,39 +9,43 @@ import './JoinFormStep6.scss';
 import { Link } from "react-router-dom";
 import mealsData from '../data/NumberOfMealsData';
 import Tile from '../components/Tile';
+import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep6() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
-  const [mealTiles, setTiles] = useState(mealsData);
+  const [mealData, setTiles] = useState(mealsData);
 
 
-  function toggleMealsTile(event: any, name: string){
-    const newMealTiles = mealTiles.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
+  function toggleMealsTile(event: React.MouseEvent<HTMLDivElement, MouseEvent>, name: string){
+    const newMealTiles = mealData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
     setTiles(newMealTiles)
     dispatch(setNumberOfMeals(name));
   }
 
-  const numberOfMealsTiles = mealTiles.map(tile => {
+  const numberOfMealsTiles = mealData.map(tile => {
     return (
       <Tile
         key={tile.id}
         id={tile.id}
         className={tile.clicked ? 'meal-tileClicked' : 'meal-tile'}
         img={tile.img}
-        name={[tile.number + (tile.number > 4 ? ' POSIŁKÓW' : ' POSIŁKI')]}
+        name={[tile.number + (tile.number > 4 ? ' POSIŁKÓW' : ' POSIŁKI')].toString()}
         handleClick={toggleMealsTile}
       />
     )
   })
 
-  const pictureWithText = 
-  <div className='meal-info-div'>
-    <p>Tutaj będzie zdjęcie</p>
-    <h1>{form.form.numberOfMeals ? form.form.numberOfMeals : 'Wybierz ile posiłków chcesz mieć w ciągu dnia'}</h1>
-    <h4>Mam dużo czasu i chcę próbować nowych rzeczy</h4>
-    <Link to='/join-form-step-7'><button>Przejdź dalej</button></Link>
-  </div>
+
+const description = mealData
+.filter(data => data.clicked)
+.map(data => {
+  return <div className='description-container'><DescriptionTile key={data.id} title={[data.number + (data.number > 4 ? ' POSIŁKÓW' : ' POSIŁKI')].toString()}
+  description={data.description}
+  img='zdjecie'
+  imgPosition='top' />
+  <Link to='/join-form-step-7'><button>Przejdź dalej</button></Link></div>
+});
 
   const mealsForm = 
   <div className='meal-tiles-div'>
@@ -54,7 +58,7 @@ export default function JoinFormStep6() {
   return (
     <div className="form-container">
       <BigTile content={mealsForm} color="orange"/>
-      <BigTile content={pictureWithText} color="white"/>
+      <BigTile content={description} color="white"/>
     </div>
   );
 }

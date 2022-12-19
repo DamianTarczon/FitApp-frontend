@@ -25,10 +25,10 @@ export default function JoinFormStep7() {
 
   function toggle(event: any, name: string){
     let newNotLikedProductsData: NotLikedProductsDataProps[];
-    if(name === 'NIE POSIADAM'){
+    if(name === 'Nie posiadam'){
       newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))
     } else {
-      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.name === 'NIE POSIADAM' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
+      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.name === 'Nie posiadam' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
     }
     setNotLikedProductsData(newNotLikedProductsData);
     dispatch(setNotLikedProducts(name));
