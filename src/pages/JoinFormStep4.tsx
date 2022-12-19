@@ -5,7 +5,7 @@ import {
   selectForm,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep4.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import allergensData from '../data/AllergensData';
 import Tile from '../components/Tile';
@@ -37,7 +37,7 @@ export default function JoinFormStep4() {
       <Tile
         key={allergen.id}
         id={allergen.id}
-        className={allergen.clicked ? 'allergen-clicked' : 'allergen-tile'}
+        className={allergen.clicked ? 'tile selected' : 'tile'}
         img={allergen.img}
         name={allergen.name}
         handleClick={toggleAllergens}
@@ -53,11 +53,9 @@ export default function JoinFormStep4() {
   </div>
 
   const alergensForm = 
-  <div className='allergens-div'>
+  <div className="tiles-form">
     <h2>WYBIERZ ALERGENY</h2>
-    <div className='container'>
-      {allergensTiles}
-    </div>
+      <div className="tiles-container">{allergensTiles}</div>
     <Link to='/join-form-step-5'><button>Przejdź dalej</button></Link>
   </div>
 

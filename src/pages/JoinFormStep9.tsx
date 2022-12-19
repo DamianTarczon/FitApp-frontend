@@ -3,6 +3,7 @@ import {
   selectForm,
 } from '../reducers/formReducer';
 import { Link } from "react-router-dom";
+import './JoinForm.scss';
 
 
 export default function JoinFormStep9() {

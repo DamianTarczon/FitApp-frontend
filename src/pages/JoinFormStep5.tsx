@@ -7,7 +7,7 @@ import {
   setActivityLevel,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep5.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import ActivityData from '../data/ActivityData';
 import Tile from '../components/Tile';

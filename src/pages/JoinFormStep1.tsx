@@ -4,7 +4,7 @@ import {
   selectForm,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep1.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 
 export default function JoinFormStep1() {

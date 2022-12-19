@@ -4,7 +4,7 @@ import {
   setDiseases
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep8.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import diseasesData from '../data/DiseasesData';
 import Tile from '../components/Tile';
@@ -35,7 +35,7 @@ export default function JoinFormStep8() {
       <Tile
         key={disease.id}
         id={disease.id}
-        className={disease.clicked ? 'disease-clicked' : 'disease-tile'}
+        className={disease.clicked ? 'tile selected' : 'tile'}
         img=''
         name={disease.name}
         handleClick={toggleDiseases}
@@ -50,9 +50,9 @@ export default function JoinFormStep8() {
   </div>
 
   const diseasesForm = 
-  <div className='diseases-div'>
+  <div className='tiles-form'>
     <h2>WYBIERZ CHOROBY</h2>
-    <div className='container'>
+    <div className='tiles-container'>
       {diseasesTiles}
     </div>
     <Link to='/join-form-step-9'><button>Przejdź dalej</button></Link>

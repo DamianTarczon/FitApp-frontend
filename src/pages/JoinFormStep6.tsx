@@ -5,7 +5,7 @@ import {
   selectForm,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep6.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import mealsData from '../data/NumberOfMealsData';
 import Tile from '../components/Tile';
@@ -28,7 +28,7 @@ export default function JoinFormStep6() {
       <Tile
         key={tile.id}
         id={tile.id}
-        className={tile.clicked ? 'meal-tileClicked' : 'meal-tile'}
+        className={tile.clicked ? 'tile selected' : 'tile'}
         img={tile.img}
         name={[tile.number + (tile.number > 4 ? ' POSIŁKÓW' : ' POSIŁKI')].toString()}
         handleClick={toggleMealsTile}
@@ -48,9 +48,9 @@ const description = mealData
 });
 
   const mealsForm = 
-  <div className='meal-tiles-div'>
+  <div className='tiles-form'>
     <h2>LICZBA POSIŁKÓW</h2>
-    <div className='container'>
+    <div className='tiles-container'>
       {numberOfMealsTiles}
     </div>
   </div>

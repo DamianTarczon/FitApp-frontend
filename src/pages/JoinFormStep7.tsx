@@ -6,7 +6,7 @@ import {
   setNotLikedProducts,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep7.scss';
+import './JoinForm.scss';
 import { Link } from "react-router-dom";
 import NotLikedProductsData from '../data/NotLikedProductsData';
 import Tile from '../components/Tile';
@@ -39,7 +39,7 @@ export default function JoinFormStep7() {
       <Tile
         key={product.id}
         id={product.id}
-        className={product.clicked ? 'product-clicked' : 'product-tile'}
+        className={product.clicked ? 'tile selected' : 'tile'}
         img={product.img}
         name={product.name}
         handleClick={toggle}
@@ -56,9 +56,9 @@ imgPosition='middle' />
 
 
   const notLikedProductsForm = 
-  <div className='products-div'>
+  <div className='tiles-form'>
     <h2>Czego nie lubisz?</h2>
-    <div className='container'>
+    <div className='tiles-container'>
       {notLikedProductsTiles}
     </div>
     <Link to='/join-form-step-8'><button>Przejdź dalej</button></Link>

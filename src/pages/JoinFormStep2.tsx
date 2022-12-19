@@ -8,7 +8,7 @@ import {
   selectForm,
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
-import './JoinFormStep2.scss';
+import './JoinForm.scss';
 
 export default function JoinFormStep2() {
   const form = useAppSelector(selectForm);
