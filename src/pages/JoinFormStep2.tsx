@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { useAppDispatch,useAppSelector } from '../app/hooks';
 import { useNavigate } from "react-router-dom"
 import {
@@ -15,26 +14,11 @@ export default function JoinFormStep2() {
   const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   const navigate = useNavigate()
-  const[basicInfo, setBasicInfo] = useState({
-    age: '',
-    height: '',
-    weight: ''
-  })
 
-  function handleChange(event: React.ChangeEvent<HTMLInputElement>): void {
-    setBasicInfo(prevFormData => {
-        return {
-            ...prevFormData,
-            [event.target.name]: event.target.value
-        }
-    })
-}
+
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void{
     event.preventDefault()
-    //dispatch(setAge(basicInfo.age))
-    //dispatch(setHeight(basicInfo.height))
-    //dispatch(setWeight(basicInfo.weight))
     navigate("/join-form-step-3")
   }
 
