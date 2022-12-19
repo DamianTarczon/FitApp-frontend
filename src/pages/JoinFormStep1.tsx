@@ -1,14 +1,12 @@
-import { useAppSelector, useAppDispatch } from '../app/hooks';
+import { useAppDispatch } from '../app/hooks';
 import {
-  setGender,
-  selectForm,
+  setGender
 } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
 import { Link } from "react-router-dom";
 
 export default function JoinFormStep1() {
-  const form = useAppSelector(selectForm);
   const dispatch = useAppDispatch();
   
   const button1 = <Link to="/join-form-step-2"><button className="gender-button" onClick={() => dispatch(setGender('male'))}>Male</button></Link>
