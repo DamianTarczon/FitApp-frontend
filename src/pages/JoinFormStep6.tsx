@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from '../app/hooks';
 import {
   setNumberOfMeals,
   selectForm,
-} from './JoinFormSlice';
+} from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinFormStep6.scss';
 import { Link } from "react-router-dom";
