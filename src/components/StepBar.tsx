@@ -1,7 +1,20 @@
-export default function StepBar() {
+import RoundIcon from './RoundIcon';
+import { StepHeaderProps } from './../services/interfaces';
+
+export default function StepBar(props: StepHeaderProps) {
+  const selectedButton = props.buttons.filter(button => button.selected)[0];
+
   return (
     <div className="footer">
-      <div className="step"><p>Krok</p><div>1</div><p>z 5</p></div>
+      <div className="step">
+        <p>Krok</p>
+        <RoundIcon 
+          text={selectedButton.number}
+          selected={selectedButton.selected}
+          completed={selectedButton.completed}
+        />
+        <p>z {props.buttons.length}</p>
+      </div>
       <div className="buttons">
         <button className="previous">
           <svg width="14" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
