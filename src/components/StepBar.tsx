@@ -1,4 +1,4 @@
-import RoundIcon from './RoundIcon';
+import {RoundIconWithText} from '../components'
 import { StepHeaderProps } from './../services/interfaces';
 
 export default function StepBar(props: StepHeaderProps) {
@@ -8,7 +8,7 @@ export default function StepBar(props: StepHeaderProps) {
     <div className="footer">
       <div className="step">
         <p>Krok</p>
-        <RoundIcon 
+        <RoundIconWithText 
           text={selectedButton.number}
           selected={selectedButton.selected}
           completed={selectedButton.completed}
