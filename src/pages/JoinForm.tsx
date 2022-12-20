@@ -7,18 +7,18 @@ export default function JoinForm() {
     {
       number: '1',
       text: 'Informacje',
+      selected: false,
+      completed: true,
+    },
+    {
+      number: '2',
+      text: 'Dieta',
       selected: true,
       completed: false,
     },
     {
-      number: '2',
-      text: 'Dieta',
-      selected: false,
-      completed: false,
-    },
-    {
-      number: '2',
-      text: 'Dieta',
+      number: '3',
+      text: 'Alergeny',
       selected: false,
       completed: false,
     },

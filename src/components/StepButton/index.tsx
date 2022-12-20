@@ -1,11 +1,11 @@
 import './index.scss'
 import { StepButtonProps } from '../../services/interfaces';
-import RoundIcon from '../RoundIcon';
+import {RoundIconWithText} from '../../components'
 
 export default function StepButton(props: StepButtonProps) {
   return (
     <button className='step-button'>
-      <RoundIcon 
+      <RoundIconWithText 
       text={props.number} 
       selected={props.selected} 
       completed={props.completed} />

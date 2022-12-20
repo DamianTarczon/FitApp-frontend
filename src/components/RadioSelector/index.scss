@@ -1,0 +1,27 @@
+.gender-select-button {
+    width: 333px;
+    height: 90px;
+    border-radius: 8px;
+    background-color: #FFF8EB;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+}
+
+.select-icon {
+    margin-top: 15px;
+}
+
+.gender-icon {
+    display: flex;
+    align-self: center;
+}
+
+.select-text {
+    display: flex;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
