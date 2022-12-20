@@ -1,12 +1,12 @@
 import React from 'react';
-import './BigTile.scss';
+import './index.scss';
 
 interface BigTileProps {
   color: string;
   content: any;
 }
 
-export default function BigTile(props: BigTileProps) {
+export default function Index(props: BigTileProps) {
   return (
     <div className="big-tile" style={{ backgroundColor: props.color }}>
       {props.content}

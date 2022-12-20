@@ -1,0 +1,72 @@
+{
+  "steps": [
+    {
+      "slug": "gender",
+      "title": "Płeć",
+      "children": [
+        {
+          "name": "TileContainer",
+          "children": [
+            {
+              "name": "TileButton",
+              "icon": "/path/to/male.png",
+              "form_name": "gender",
+              "value": "male"
+            },
+            {
+              "name": "TileButton",
+              "icon": "/path/to/female.png",
+              "form_name": "gender",
+              "value": "female"
+            }
+          ]
+        }
+      ],
+      "next_step": "informacje-podstawowe"
+    },
+    {
+      "slug": "informacje-podstawowe",
+      "title": "Informacje podstawowe",
+      "children": [
+        {
+          "name": "TileContainer",
+          "children": [
+            {
+              "name": "InfoContainer",
+              "icon": "/path/to/icon.png",
+              "title": "Informacje podstawowe",
+              "text": "To niezwykle ważne! Na podstawie twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp."
+            },
+            {
+              "name": "DietForm",
+              "children": [
+                {
+                  "name": "DietInput",
+                  "form_name": "age",
+                  "placeholder": "Wiek",
+                  "required": true
+                },
+                {
+                  "name": "DietInput",
+                  "form_name": "height",
+                  "placeholder": "Wzrost",
+                  "required": true
+                },
+                {
+                  "name": "DietInput",
+                  "form_name": "weight",
+                  "placeholder": "Waga",
+                  "required": true
+                },
+                {
+                  "name": "DietButton",
+                  "title": "Przejdź dalej"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
