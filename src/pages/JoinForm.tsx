@@ -3,6 +3,8 @@ import {FormContainer, Header, StepBar, StepHeader} from '../components'
 
 
 export default function JoinForm() {
+
+  //temporary data, later it will be from separated json
   const buttonsProps = [
     {
       number: '1',
@@ -42,11 +44,26 @@ export default function JoinForm() {
     },
   ]
 
+  //temporary data
+  const formData = [
+      {
+        value: 'female',
+        text: 'Jestem Kobietą',
+        selected: true,
+      },
+      {
+        value: 'male',
+        text: 'Jestem Mężczyzną',
+        selected: false,
+      }
+    ]
+  
+
   return (
     <div>
       <Header title="KeepFit"/>
       <StepHeader buttons={buttonsProps} />
-      <FormContainer />
+      <FormContainer buttons={formData}/>
       <StepBar buttons={buttonsProps} />
     </div>
   );

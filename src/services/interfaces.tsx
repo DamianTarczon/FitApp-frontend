@@ -20,3 +20,25 @@ export interface RoundIconProps {
     selected: boolean,
     completed: boolean,
 }
+
+export interface FormContainerProps {
+    buttons: {
+        value: string;
+        text: string;
+        selected: boolean;
+    }[]
+}
+
+export interface GenderFormProps {
+    buttons: {
+        value: string;
+        text: string;
+        selected: boolean;
+    }[]
+}
+
+export interface RadioSelectorProps {
+    gender: string,
+    text: string,
+    selected: boolean,
+}
