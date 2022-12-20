@@ -41,12 +41,13 @@ export default function JoinForm() {
       completed: false,
     },
   ]
+
   return (
     <div>
       <Header title="KeepFit"/>
       <StepHeader buttons={buttonsProps} />
       <FormContainer />
-      <StepBar />
+      <StepBar buttons={buttonsProps} />
     </div>
   );
 }
