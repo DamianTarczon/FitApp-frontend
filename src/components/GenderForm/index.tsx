@@ -10,6 +10,7 @@ export default function GenderForm({buttons}: GenderFormProps) {
 
   return (
       <form className='form'>
+        {/* Damian ten div to placeholder na twojego labela */}
         <div>Wybierz swoją płeć</div>
         {radioSelectors}
       </form>

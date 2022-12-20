@@ -10,6 +10,7 @@ export default function StepButton(props: StepButtonProps) {
       selected={props.selected} 
       completed={props.completed} />
       {props.text}
+      {props.selected && <div className='triangle'></div>}
     </button>
   );
 }
