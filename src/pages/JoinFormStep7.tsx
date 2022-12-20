@@ -1,12 +1,9 @@
 import { useState } from 'react';
-import { useAppDispatch,useAppSelector } from '../app/hooks';
-import {
-  setNotLikedProducts,
-  selectForm
-} from '../reducers/formReducer';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { setNotLikedProducts, selectForm } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import NotLikedProductsData from '../data/NotLikedProductsData';
 import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
@@ -17,24 +14,35 @@ export default function JoinFormStep7() {
   const [notLikedProductsData, setNotLikedProductsData] = useState(NotLikedProductsData);
 
   interface NotLikedProductsDataProps {
-    id: number,
-    img: string,
-    name: string,
-    clicked: boolean
-}
+    id: number;
+    img: string;
+    name: string;
+    clicked: boolean;
+  }
 
-  function toggle(event: React.ChangeEvent<HTMLInputElement>, name: string){
+  function toggle(event: React.ChangeEvent<HTMLInputElement>, name: string) {
     let newNotLikedProductsData: NotLikedProductsDataProps[];
-    if(name === 'NIE POSIADAM'){
-      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))
+    if (name === 'NIE POSIADAM') {
+      newNotLikedProductsData = notLikedProductsData.map((tile) => ({
+        ...tile,
+        clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false,
+      }));
     } else {
-      newNotLikedProductsData = notLikedProductsData.map(tile => ({...tile, clicked: tile.name === 'NIE POSIADAM' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
+      newNotLikedProductsData = notLikedProductsData.map((tile) => ({
+        ...tile,
+        clicked:
+          tile.name === 'NIE POSIADAM'
+            ? false
+            : tile.id === Number(event.currentTarget.id)
+            ? !tile.clicked
+            : tile.clicked,
+      }));
     }
     setNotLikedProductsData(newNotLikedProductsData);
     dispatch(setNotLikedProducts(name));
   }
 
-  const notLikedProductsTiles = notLikedProductsData.map(product => {
+  const notLikedProductsTiles = notLikedProductsData.map((product) => {
     return (
       <Tile
         key={product.id}
@@ -44,31 +52,32 @@ export default function JoinFormStep7() {
         name={product.name}
         handleClick={toggle}
       />
-    )
-  })
+    );
+  });
 
-  const pictureWithText = 
-  <DescriptionTile title='Lubie, nie lubię..'
-description='Najczęściej odrzucane produkty'
-img='zdjecie'
-imgPosition='middle' />
+  const pictureWithText = (
+    <DescriptionTile
+      title="Lubie, nie lubię.."
+      description="Najczęściej odrzucane produkty"
+      img="zdjecie"
+      imgPosition="middle"
+    />
+  );
 
-
-
-  const notLikedProductsForm = 
-  <div className='tiles-form'>
-    <h2>Czego nie lubisz?</h2>
-    <div className='tiles-container'>
-      {notLikedProductsTiles}
+  const notLikedProductsForm = (
+    <div className="tiles-form">
+      <h2>Czego nie lubisz?</h2>
+      <div className="tiles-container">{notLikedProductsTiles}</div>
+      <Link to="/join-form-step-8">
+        <button disabled={form.notLikedProducts.length === 0}>Przejdź dalej</button>
+      </Link>
     </div>
-    <Link to='/join-form-step-8'><button disabled={form.notLikedProducts.length === 0}>Przejdź dalej</button></Link>
-  </div>
+  );
 
   return (
     <div className="form-container">
-      <BigTile content={pictureWithText} color="#f8bb4b"/>
-      <BigTile content={notLikedProductsForm} color="#ffffff"/>
+      <BigTile content={pictureWithText} color="#f8bb4b" />
+      <BigTile content={notLikedProductsForm} color="#ffffff" />
     </div>
   );
 }
-

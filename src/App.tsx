@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import JoinFormStep1 from './pages/JoinFormStep1';
 import JoinFormStep2 from './pages/JoinFormStep2';
 import JoinFormStep3 from './pages/JoinFormStep3';
@@ -15,15 +15,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<JoinFormStep1 />}/>
-        <Route path="/join-form-step-2" element={<JoinFormStep2 />}/>
-        <Route path="/join-form-step-3" element={<JoinFormStep3 />}/>
-        <Route path="/join-form-step-4" element={<JoinFormStep4 />}/>
-        <Route path="/join-form-step-5" element={<JoinFormStep5 />}/>
-        <Route path="/join-form-step-6" element={<JoinFormStep6 />}/>
-        <Route path="/join-form-step-7" element={<JoinFormStep7 />}/>
-        <Route path="/join-form-step-8" element={<JoinFormStep8 />}/>
-        <Route path="/join-form-step-9" element={<JoinFormStep9 />}/>
+        <Route index element={<JoinFormStep1 />} />
+        <Route path="/join-form-step-2" element={<JoinFormStep2 />} />
+        <Route path="/join-form-step-3" element={<JoinFormStep3 />} />
+        <Route path="/join-form-step-4" element={<JoinFormStep4 />} />
+        <Route path="/join-form-step-5" element={<JoinFormStep5 />} />
+        <Route path="/join-form-step-6" element={<JoinFormStep6 />} />
+        <Route path="/join-form-step-7" element={<JoinFormStep7 />} />
+        <Route path="/join-form-step-8" element={<JoinFormStep8 />} />
+        <Route path="/join-form-step-9" element={<JoinFormStep9 />} />
       </Routes>
     </BrowserRouter>
   );

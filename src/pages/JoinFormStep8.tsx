@@ -1,15 +1,12 @@
 import { useState } from 'react';
-import { useAppDispatch,useAppSelector } from '../app/hooks';
-import {
-  setDiseases,
-  selectForm
-} from '../reducers/formReducer';
+import { useAppDispatch, useAppSelector } from '../app/hooks';
+import { setDiseases, selectForm } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import diseasesData from '../data/DiseasesData';
 import Tile from '../components/Tile';
-import DescriptionTile from '../components/DescriptionTile'
+import DescriptionTile from '../components/DescriptionTile';
 
 export default function JoinFormStep8() {
   const form = useAppSelector(selectForm);
@@ -17,54 +14,62 @@ export default function JoinFormStep8() {
   const [diseaseData, setDiseaseData] = useState(diseasesData);
 
   interface DiseaseDataProps {
-    id: number
-    name: string,
-    clicked: boolean
+    id: number;
+    name: string;
+    clicked: boolean;
   }
 
-  function toggleDiseases(event: any, name: string){
+  function toggleDiseases(event: any, name: string) {
     let newDiseaseData: DiseaseDataProps[];
-    if(name === 'NIE POSIADAM'){
-      newDiseaseData = diseaseData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false}))
+    if (name === 'NIE POSIADAM') {
+      newDiseaseData = diseaseData.map((tile) => ({
+        ...tile,
+        clicked: tile.id === Number(event.currentTarget.id) ? !tile.clicked : false,
+      }));
     } else {
-      newDiseaseData = diseaseData.map(tile => ({...tile, clicked: tile.name === 'NIE POSIADAM' ? false : tile.id === Number(event.currentTarget.id) ? !tile.clicked : tile.clicked}))
+      newDiseaseData = diseaseData.map((tile) => ({
+        ...tile,
+        clicked:
+          tile.name === 'NIE POSIADAM'
+            ? false
+            : tile.id === Number(event.currentTarget.id)
+            ? !tile.clicked
+            : tile.clicked,
+      }));
     }
     setDiseaseData(newDiseaseData);
     dispatch(setDiseases(name));
   }
 
-  const diseasesTiles = diseaseData.map(disease => {
+  const diseasesTiles = diseaseData.map((disease) => {
     return (
       <Tile
         key={disease.id}
         id={disease.id}
         className={disease.clicked ? 'tile selected' : 'tile'}
-        img=''
+        img=""
         name={disease.name}
         handleClick={toggleDiseases}
       />
-    )
-  })
+    );
+  });
 
-  const description = 
-  <DescriptionTile title='Choroby'
-  description=''
-  img='zdjecie'
-  imgPosition='down' />
+  const description = <DescriptionTile title="Choroby" description="" img="zdjecie" imgPosition="down" />;
 
-  const diseasesForm = 
-  <div className='tiles-form'>
-    <h2>WYBIERZ CHOROBY</h2>
-    <div className='tiles-container'>
-      {diseasesTiles}
+  const diseasesForm = (
+    <div className="tiles-form">
+      <h2>WYBIERZ CHOROBY</h2>
+      <div className="tiles-container">{diseasesTiles}</div>
+      <Link to="/join-form-step-9">
+        <button disabled={form.diseases.length === 0}>Przejdź dalej</button>
+      </Link>
     </div>
-    <Link to='/join-form-step-9'><button disabled={form.diseases.length === 0}>Przejdź dalej</button></Link>
-  </div>
+  );
 
   return (
     <div className="form-container">
-      <BigTile content={description} color="#f8bb4b"/>
-      <BigTile content={diseasesForm} color="#ffffff"/>
+      <BigTile content={description} color="#f8bb4b" />
+      <BigTile content={diseasesForm} color="#ffffff" />
     </div>
   );
 }

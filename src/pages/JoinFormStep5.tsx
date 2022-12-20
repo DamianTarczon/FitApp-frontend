@@ -1,11 +1,9 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import { useAppDispatch } from '../app/hooks';
-import {
-  setActivityLevel,
-} from '../reducers/formReducer';
+import { setActivityLevel } from '../reducers/formReducer';
 import BigTile from '../components/BigTile';
 import './JoinForm.scss';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import ActivityData from '../data/ActivityData';
 import Tile from '../components/Tile';
 import DescriptionTile from '../components/DescriptionTile';
@@ -14,14 +12,16 @@ export default function JoinFormStep5() {
   const dispatch = useAppDispatch();
   const [activityTilesData, setActivityTilesData] = useState(ActivityData);
 
-
-  function toggleActivityTile(event: React.ChangeEvent<HTMLInputElement>, name: string){
-    const newActivityTiles = activityTilesData.map(tile => ({...tile, clicked: tile.id === Number(event.currentTarget.id) ? true : false}))
-    setActivityTilesData(newActivityTiles)
+  function toggleActivityTile(event: React.ChangeEvent<HTMLInputElement>, name: string) {
+    const newActivityTiles = activityTilesData.map((tile) => ({
+      ...tile,
+      clicked: tile.id === Number(event.currentTarget.id) ? true : false,
+    }));
+    setActivityTilesData(newActivityTiles);
     dispatch(setActivityLevel(name));
   }
 
-  const activityTiles = activityTilesData.map(tile => {
+  const activityTiles = activityTilesData.map((tile) => {
     return (
       <Tile
         key={tile.id}
@@ -31,26 +31,32 @@ export default function JoinFormStep5() {
         name={tile.name}
         handleClick={toggleActivityTile}
       />
-    )
-  })
-
-  const description = activityTilesData
-  .filter(data => data.clicked)
-  .map(data => {
-    return <div className='description-container'><DescriptionTile key={data.id} title={data.name}
-    description={data.description}
-    img='zdjecie'
-    imgPosition='top' />
-    <Link to='/join-form-step-6'><button>Przejdź dalej</button></Link></div>
+    );
   });
 
-  
+  const description = activityTilesData
+    .filter((data) => data.clicked)
+    .map((data) => {
+      return (
+        <div className="description-container">
+          <DescriptionTile
+            key={data.id}
+            title={data.name}
+            description={data.description}
+            img="zdjecie"
+            imgPosition="top"
+          />
+          <Link to="/join-form-step-6">
+            <button>Przejdź dalej</button>
+          </Link>
+        </div>
+      );
+    });
 
   return (
     <div className="form-container">
-      <BigTile content={activityTiles} color="#f8bb4b"/>
-      <BigTile content={description} color="#ffffff"/>
+      <BigTile content={activityTiles} color="#f8bb4b" />
+      <BigTile content={description} color="#ffffff" />
     </div>
   );
 }
-
