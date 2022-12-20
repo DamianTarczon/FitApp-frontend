@@ -1,7 +1,6 @@
-import DescriptionTile from './DescriptionTile';
-import BigTile from './BigTile';
+import FormContainer from "./FormContainer";
+import Header from "./Header";
+import StepBar from "./StepBar";
+import StepHeader from "./StepHeader";
 
-module.exports = {
-  BigTile,
-  DescriptionTile,
-};
+export {FormContainer, Header, StepBar, StepHeader};
