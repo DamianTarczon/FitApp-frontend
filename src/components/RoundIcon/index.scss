@@ -1,0 +1,22 @@
+@import "../../styles/config";
+
+.round-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    width: $round-icon-size;
+    height: $round-icon-size;
+    border-radius: calc($round-icon-size/2);
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.selected {
+    background-color: $green;
+}
+.completed {
+    background-color: $black;
+}
