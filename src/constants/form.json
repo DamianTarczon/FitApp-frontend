@@ -2,24 +2,19 @@
   "steps": [
     {
       "slug": "gender",
-      "title": "Płeć",
       "children": [
         {
-          "name": "TileContainer",
-          "children": [
-            {
-              "name": "TileButton",
-              "icon": "/path/to/male.png",
-              "form_name": "gender",
-              "value": "male"
-            },
-            {
-              "name": "TileButton",
-              "icon": "/path/to/female.png",
-              "form_name": "gender",
-              "value": "female"
-            }
-          ]
+          "name": "GenderForm",
+          "title": "Wybierz swoja plec",
+          "buttons": [{
+            "value": "female",
+            "text": "Jestem Kobieta",
+            "selected": true
+          },{
+            "value": "male",
+            "text": "Jestem Mezczyzna",
+            "selected": false
+          }]
         }
       ],
       "next_step": "informacje-podstawowe"
