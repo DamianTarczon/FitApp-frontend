@@ -1,16 +1,7 @@
-@import "~bootstrap/scss/bootstrap";
 
 .form-container {
   height: 572px;
   background-size: cover;
-  padding-top: 156px;
-  padding-bottom: 156px;
   display: flex;
   justify-content: center;
-}
-
-@include media-breakpoint-up(lg){
-  .form-container{
-    padding-top: 224px;
-  }
 }
