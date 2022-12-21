@@ -6,7 +6,7 @@ import StepButton from "./StepButton";
 import RadioSelector from "./RadioSelector";
 import RoundIconWithText from "./RoundIconWithText";
 import GenderForm from "./GenderForm";
-import StepCounter from "./StepCounter";
+import StepCounter from "./StepBar/StepCounter";
 import StepBarButtons from "./StepBar/StepBarButtons";
 import Title from "./Title"
 

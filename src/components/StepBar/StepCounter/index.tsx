@@ -1,6 +1,6 @@
 import './index.scss'
-import { StepCounterProps } from '../../services/interfaces';
-import {RoundIconWithText} from '../../components';
+import { StepCounterProps } from '../../../services/interfaces';
+import {RoundIconWithText} from '../..';
 
 export default function StepCounter(props: StepCounterProps){
     return(

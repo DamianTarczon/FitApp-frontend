@@ -52,7 +52,7 @@ export default function JoinForm() {
 
   return (
     <div>
-      <Header title="KeepFit" />
+      <Header />
       <StepHeader buttons={buttonsProps} />
       <FormContainer buttons={formData} />
       <StepBar buttons={buttonsProps} />
