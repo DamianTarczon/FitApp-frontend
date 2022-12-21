@@ -1,8 +1,18 @@
 @import '../../styles/config';
+@import "~bootstrap/scss/bootstrap";
+
+
 .form-container {
   height: 572px;
   background-size: cover;
   background-color: $light-orange;
   display: flex;
   justify-content: center;
+}
+
+@include media-breakpoint-up(lg){
+  .form-container{
+    justify-content: unset;
+    padding: 0 188px;
+  }
 }
