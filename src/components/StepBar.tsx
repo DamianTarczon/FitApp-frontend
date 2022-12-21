@@ -3,7 +3,7 @@ import { StepHeaderProps } from './../services/interfaces';
 import { StepCounter } from '../components';
 
 export default function StepBar(props: StepHeaderProps) {
-  const selectedButton = props.buttons.filter(button => button.selected)[0];
+  const selectedButton = props.buttons.filter((button) => button.selected)[0];
 
   return (
     <div className="footer">

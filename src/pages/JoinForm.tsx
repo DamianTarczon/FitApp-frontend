@@ -1,9 +1,7 @@
 import './JoinForm.scss';
-import {FormContainer, Header, StepBar, StepHeader} from '../components'
-
+import { FormContainer, Header, StepBar, StepHeader } from '../components';
 
 export default function JoinForm() {
-
   //temporary data, later it will be from separated json
   const buttonsProps = [
     {
@@ -42,28 +40,27 @@ export default function JoinForm() {
       selected: false,
       completed: false,
     },
-  ]
+  ];
 
   //temporary data
   const formData = [
-      {
-        value: 'female',
-        text: 'Jestem Kobieta',
-        selected: true,
-      },
-      {
-        value: 'male',
-        text: 'Jestem Mezczyzna',
-        selected: false,
-      }
-    ]
-  
+    {
+      value: 'female',
+      text: 'Jestem Kobieta',
+      selected: true,
+    },
+    {
+      value: 'male',
+      text: 'Jestem Mezczyzna',
+      selected: false,
+    },
+  ];
 
   return (
     <div>
-      <Header title="KeepFit"/>
+      <Header title="KeepFit" />
       <StepHeader buttons={buttonsProps} />
-      <FormContainer buttons={formData}/>
+      <FormContainer buttons={formData} />
       <StepBar buttons={buttonsProps} />
     </div>
   );
