@@ -6,6 +6,8 @@ import StepButton from "./StepButton";
 import RadioSelector from "./RadioSelector";
 import RoundIconWithText from "./RoundIconWithText";
 import GenderForm from "./GenderForm";
+import StepCounter from "./StepCounter";
+import StepBarButtons from "./StepBarButtons";
 
 export {
     FormContainer, 
@@ -15,5 +17,7 @@ export {
     StepButton,
     RadioSelector,
     RoundIconWithText,
-    GenderForm
+    GenderForm,
+    StepCounter,
+    StepBarButtons
 };
