@@ -7,7 +7,7 @@ import RadioSelector from "./RadioSelector";
 import RoundIconWithText from "./RoundIconWithText";
 import GenderForm from "./GenderForm";
 import StepCounter from "./StepCounter";
-import StepBarButtons from "./StepBarButtons";
+import StepBarButtons from "./StepBar/StepBarButtons";
 import Title from "./Title"
 
 export {
