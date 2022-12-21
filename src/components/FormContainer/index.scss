@@ -9,7 +9,7 @@
   justify-content: center;
 }
 
-@include media-breakpoint-up(sm){
+@include media-breakpoint-up(lg){
   .form-container{
     padding-top: 224px;
   }
