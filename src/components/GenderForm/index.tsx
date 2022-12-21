@@ -1,6 +1,7 @@
 import './index.scss';
 import { RadioSelector } from '../../components';
 import { GenderFormProps } from '../../services/interfaces';
+import { Title } from '../../components'
 
 export default function GenderForm({ buttons }: GenderFormProps) {
   const radioSelectors = buttons.map((button, index) => {
@@ -9,8 +10,7 @@ export default function GenderForm({ buttons }: GenderFormProps) {
 
   return (
     <form className="form">
-      {/* Damian ten div to placeholder na twojego labela */}
-      <div>Wybierz swoją płeć</div>
+      <Title title='Wybierz swoją płeć'/>
       {radioSelectors}
     </form>
   );
