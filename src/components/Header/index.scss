@@ -1,12 +1,11 @@
+@import '../../styles/config';
+
 .navbar {
     margin: 20px 25px 0 25px;
-    .navbar-brand {
-      font-size: x-large;
-    }
     button {
-      padding: 7px 18px;
+      padding: 11px 20px;
       border-radius: 5px;
-      background-color: #eef8e8;
+      background-color: $lightGreen;
       border: none;
     }
   }
