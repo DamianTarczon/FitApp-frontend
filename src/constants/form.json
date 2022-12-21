@@ -5,14 +5,14 @@
       "children": [
         {
           "name": "GenderForm",
-          "title": "Wybierz swoja plec",
+          "title": "Wybierz swoją płeć",
           "buttons": [{
             "value": "female",
-            "text": "Jestem Kobieta",
+            "text": "Jestem Kobietą",
             "selected": true
           },{
             "value": "male",
-            "text": "Jestem Mezczyzna",
+            "text": "Jestem Mezczyzną",
             "selected": false
           }]
         }
