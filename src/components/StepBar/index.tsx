@@ -1,6 +1,7 @@
-import { StepBarButtons } from '../components'
-import { StepHeaderProps } from './../services/interfaces';
-import { StepCounter } from '../components';
+import { StepBarButtons } from '../../components'
+import { StepHeaderProps } from '../../services/interfaces';
+import { StepCounter } from '../../components';
+import './index.scss'
 
 export default function StepBar(props: StepHeaderProps) {
   const selectedButton = props.buttons.filter((button) => button.selected)[0];
