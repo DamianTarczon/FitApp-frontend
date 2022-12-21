@@ -14,7 +14,9 @@ export default function StepBar(props: StepHeaderProps) {
         completed={selectedButton.completed}
         numberOfButtons={props.buttons.length}
       />
-      <StepBarButtons />
+      <StepBarButtons 
+        number={selectedButton.number}
+      />
     </div>
   );
 }
