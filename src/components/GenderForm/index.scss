@@ -1,7 +1,17 @@
+@import "~bootstrap/scss/bootstrap";
+
 .form {
   height: 260px;
   width: 333px;
   display: flex;
   flex-direction: column;
   gap: 14px;
+}
+
+@include media-breakpoint-up(sm){
+  .form{
+    flex-direction: row;
+    width: 1164px;
+    border: 1px solid red;
+  }
 }
