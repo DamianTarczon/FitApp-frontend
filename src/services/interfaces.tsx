@@ -42,3 +42,10 @@ export interface RadioSelectorProps {
     text: string,
     selected: boolean,
 }
+
+export interface StepCounterProps{
+    number: string,
+    selected: boolean,
+    completed: boolean,
+    numberOfButtons: number
+}
