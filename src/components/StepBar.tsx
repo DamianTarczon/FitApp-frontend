@@ -1,20 +1,18 @@
 import { RoundIconWithText } from '../components';
 import { StepHeaderProps } from './../services/interfaces';
+import  StepCounter  from '../components/StepCounter';
 
 export default function StepBar(props: StepHeaderProps) {
   const selectedButton = props.buttons.filter((button) => button.selected)[0];
 
   return (
     <div className="footer">
-      <div className="step">
-        <p>Krok</p>
-        <RoundIconWithText
-          text={selectedButton.number}
-          selected={selectedButton.selected}
-          completed={selectedButton.completed}
-        />
-        <p>z {props.buttons.length}</p>
-      </div>
+      <StepCounter 
+        number={selectedButton.number}
+        selected={selectedButton.selected}
+        completed={selectedButton.completed}
+        numberOfButtons={props.buttons.length}
+      />
       <div className="buttons">
         <button className="previous">
           <svg width="14" height="30" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

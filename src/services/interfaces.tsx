@@ -37,7 +37,14 @@ export interface GenderFormProps {
 }
 
 export interface RadioSelectorProps {
-  gender: string;
-  text: string;
-  selected: boolean;
+    gender: string,
+    text: string,
+    selected: boolean,
+}
+
+export interface StepCounterProps{
+    number: string,
+    selected: boolean,
+    completed: boolean,
+    numberOfButtons: number
 }

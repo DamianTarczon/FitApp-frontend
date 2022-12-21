@@ -20,14 +20,8 @@
   margin: 20px 25px 20px 25px;
   display: flex;
   align-items: center;
-  .step {
-    display: flex;
-    margin-left: -4px;
-  }
-  .step * {
-    margin: 0 4px 0 4px;
-  }
-  .buttons {
+  
+  .buttons{
     margin-left: auto;
     display: flex;
     .previous {
