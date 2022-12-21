@@ -8,10 +8,12 @@
   gap: 14px;
 }
 
-@include media-breakpoint-up(sm){
+@include media-breakpoint-up(lg){
   .form{
     flex-direction: row;
+    flex-wrap: wrap;
     width: 1164px;
-    border: 1px solid red;
+    height: 175px;
+    gap: 0px 24px;
   }
 }

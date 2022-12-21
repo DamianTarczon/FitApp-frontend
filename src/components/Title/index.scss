@@ -1,8 +1,18 @@
+@import "~bootstrap/scss/bootstrap";
+
 .title{
-    font-family: 'urbane,sans-serif';
+    font-family: 'Urbane';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 22px;
     line-height: 26px;
     color: #1F1939;
+    height: 65px;
+}
+
+@include media-breakpoint-up(lg){
+    .title{
+        width: 100%;
+        height: 70px;
+    }
 }
