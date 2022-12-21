@@ -23,23 +23,17 @@ export default function JoinForm() {
       completed: false,
     },
     {
-      number: '2',
-      text: 'Dieta',
+      number: '4',
+      text: 'Aktywnosc',
       selected: false,
       completed: false,
     },
     {
-      number: '2',
-      text: 'Dieta',
+      number: '5',
+      text: 'Preferencje i choroby',
       selected: false,
       completed: false,
-    },
-    {
-      number: '2',
-      text: 'Dieta',
-      selected: false,
-      completed: false,
-    },
+    }
   ];
 
   //temporary data
