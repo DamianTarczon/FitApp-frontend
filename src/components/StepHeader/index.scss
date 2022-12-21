@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/bootstrap";
+
+//mobile styling
 .step-header-container {
   height: 80px;
   display: flex;
@@ -12,3 +15,18 @@
 .step-header-container::-webkit-scrollbar {
   display: none;
 }
+//end mobile styling
+
+
+//desktop styling
+@include media-breakpoint-up(sm){
+.step-header-container {
+  padding: 0px 188px;
+  gap: 55px;
+}
+
+.step-header-container::-webkit-scrollbar {
+  display: none;
+}
+}
+//end desktopstyling
