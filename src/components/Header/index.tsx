@@ -1,4 +1,5 @@
-import { headsetIcon } from "../assets/svg_icons";
+import { headsetIcon } from "../../assets/svg_icons";
+import './index.scss'
 
 export default function Header(props: {title: string}) {
   return (
