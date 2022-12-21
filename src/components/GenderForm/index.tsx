@@ -10,7 +10,7 @@ export default function GenderForm({ buttons }: GenderFormProps) {
 
   return (
     <form className="form">
-      <Title title='Wybierz swoja plec'/>
+      <Title title='Wybierz swoją płeć'/>
       {radioSelectors}
     </form>
   );

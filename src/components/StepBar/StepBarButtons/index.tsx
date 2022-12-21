@@ -13,7 +13,8 @@ export default function StepBarButtons(props: {number: string}){
                 {leftArrowIcon}
             </button>
             <button className="next">
-                Dalej
+                {/* Zapytać się gdzie wstawić słowo 'Dalej' jako zmienną */}
+                Dalej 
                 {rightArrowIcon}
             </button>
         </div>
