@@ -1,11 +1,28 @@
 @import '../../styles/config';
+@import "~bootstrap/scss/bootstrap";
 
 .navbar {
-    margin: 20px 25px 0 25px;
-    button {
-      padding: 11px 20px;
-      border-radius: 5px;
-      background-color: $lightGreen;
-      border: none;
+  margin: 20px 25px 0 25px;
+  button {
+    padding: 11px 20px;
+    border-radius: 5px;
+    background-color: $lightGreen;
+    border: none;
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .navbar{
+    margin: 30px 188px 0 188px;
+    button::after{
+      margin-left: 10px;
+      content: $help-button-content;
+      font-family: $primary-font;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: $black;
     }
   }
+}
