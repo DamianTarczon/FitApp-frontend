@@ -4,7 +4,7 @@ import { GenderForm } from '../../components';
 import { FormContainerProps } from '../../services/interfaces';
 import { desktopBackgroundList, mobileBackgroundList } from '../../assets/backgrounds';
 
-export default function FormContainer({ buttons }: FormContainerProps) {
+export default function FormContainer({ content }: any) {
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [randomInt, setRandomInt] = useState<number>(1);
 
@@ -33,7 +33,7 @@ export default function FormContainer({ buttons }: FormContainerProps) {
 
   return (
     <div className="form-container" style={style}>
-      <GenderForm buttons={buttons} />
+     {content}
     </div>
   );
 }
