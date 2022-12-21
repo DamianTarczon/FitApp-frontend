@@ -1,5 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
 .footer {
-    margin: 20px 25px 20px 25px;
-    display: flex;
-    align-items: center;
+  margin: 20px 25px 20px 25px;
+  display: flex;
+  align-items: center;
+}
+
+@include media-breakpoint-up(lg){
+  .footer{
+    margin: 20px 188px 20px 188px;
   }
+}
