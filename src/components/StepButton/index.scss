@@ -1,29 +1,28 @@
 .step-button {
-    border: none;
-    background-color: transparent;
-    height: 24px;
-    display: flex;
-    padding: 0;
-    gap: 14px;
-    font-family: 'Urbane';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    display: flex;
-    align-items: center;
-    color: #1F1939;
-    position: relative;
+  border: none;
+  background-color: transparent;
+  height: 24px;
+  display: flex;
+  padding: 0;
+  gap: 14px;
+  font-family: 'Urbane';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  color: #1f1939;
+  position: relative;
 }
 
 .triangle {
-    position:absolute;
-    top:42px;
-    left: 50%;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    rotate: 45deg;
-    background-color: #FAE9CD;
-
+  position: absolute;
+  top: 42px;
+  left: 50%;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  rotate: 45deg;
+  background-color: #fae9cd;
 }

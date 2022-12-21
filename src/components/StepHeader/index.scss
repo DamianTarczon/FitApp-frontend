@@ -1,15 +1,14 @@
 .step-header-container {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    padding: 0px 30px;
-    gap: 30px;
-    overflow: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+  gap: 30px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .step-header-container::-webkit-scrollbar {
-    display: none;
-  }
-  
+  display: none;
+}
