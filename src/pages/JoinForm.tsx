@@ -48,12 +48,12 @@ export default function JoinForm() {
   const formData = [
       {
         value: 'female',
-        text: 'Jestem Kobietą',
+        text: 'Jestem Kobieta',
         selected: true,
       },
       {
         value: 'male',
-        text: 'Jestem Mężczyzną',
+        text: 'Jestem Mezczyzna',
         selected: false,
       }
     ]
