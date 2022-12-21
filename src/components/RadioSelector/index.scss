@@ -1,10 +1,11 @@
 @import "~bootstrap/scss/bootstrap";
+@import '../../styles/config';
 
 .gender-select-button {
   width: 333px;
   height: 90px;
   border-radius: 8px;
-  background-color: #fff8eb;
+  background-color: $button-background;
   border: none;
   display: flex;
   padding: 0px 15px 0px 30px;
@@ -22,7 +23,7 @@
 .select-text {
   display: flex;
   align-self: center;
-  font-family: 'Urbane','sans-serif';
+  font-family: $primary-font;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;

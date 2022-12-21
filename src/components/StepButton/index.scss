@@ -1,3 +1,4 @@
+@import '../../styles/config';
 .step-button {
   border: none;
   background-color: transparent;
@@ -5,7 +6,7 @@
   display: flex;
   padding: 0;
   gap: 14px;
-  font-family: 'Urbane';
+  font-family: $primary-font;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -25,5 +26,5 @@
   width: 20px;
   height: 20px;
   rotate: 45deg;
-  background-color: #fae9cd;
+  background-color: $light-orange;
 }

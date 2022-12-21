@@ -1,7 +1,8 @@
-
+@import '../../styles/config';
 .form-container {
   height: 572px;
   background-size: cover;
+  background-color: $light-orange;
   display: flex;
   justify-content: center;
 }
