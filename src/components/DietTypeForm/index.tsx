@@ -4,7 +4,7 @@ import { RadioSelector } from "../../components"
 
 export default function DietTypeForm(props: any) {
     console.log(props);
-    const buttons = props.buttons.map((button: any, index: any) => {
+    const buttons = props.data.map((button: any, index: any) => {
         // return <RadioSelector />
     });
 
