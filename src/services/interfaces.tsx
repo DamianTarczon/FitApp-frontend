@@ -33,6 +33,7 @@ export interface GenderFormProps {
   data: {
     form_name: string;
     value: string;
+    icon: string;
     text: string;
     selected: boolean;
   }[];
@@ -53,6 +54,7 @@ export interface BasicInfoFormProps {
 export interface RadioSelectorProps {
     form_name: string,
     value: string,
+    icon: string,
     text: string,
     selected: boolean,
 }

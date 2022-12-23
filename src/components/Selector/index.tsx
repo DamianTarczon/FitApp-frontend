@@ -1,5 +1,4 @@
 import './index.scss';
-import { noSelectedIcon, selectedIcon, femaleIcon, maleIcon } from '../../assets/svg_icons';
 import { SelectorProps } from '../../services/interfaces';
 
 export default function Selector(props: SelectorProps) {

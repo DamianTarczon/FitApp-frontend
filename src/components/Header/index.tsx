@@ -1,6 +1,6 @@
-import { headsetIcon } from "../../assets/svg_icons";
+import { headsetIcon } from "../../utils/svg_icons";
 import './index.scss'
-import { headerTitle } from "../../assets/svg_icons";
+import { headerTitle } from "../../utils/svg_icons";
 
 export default function Header() {
   return (

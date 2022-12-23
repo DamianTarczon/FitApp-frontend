@@ -1,5 +1,5 @@
 import './index.scss'
-import { leftArrowIcon, rightArrowIcon } from '../../../assets/svg_icons';
+import { leftArrowIcon, rightArrowIcon } from '../../../utils/svg_icons';
 
 export default function StepBarButtons(props: {number: string}){
 

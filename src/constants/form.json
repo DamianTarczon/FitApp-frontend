@@ -43,11 +43,13 @@
           "data": [{
             "form_name" : "gender",
             "value": "female",
+            "icon" : "/assets/icons/female-icon.svg",
             "text": "Jestem Kobietą",
             "selected": true
           },{
             "form_name" : "gender",
             "value": "male",
+            "icon": "/assets/icons/male-icon.svg",
             "text": "Jestem Mezczyzną",
             "selected": false
           }]
