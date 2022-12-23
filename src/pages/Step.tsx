@@ -21,39 +21,7 @@ export default function Step() {
         return <Component {...child} />;
       }
     });
-    console.log(currentStep);
-    const buttonsProps = [
-        {
-          number: '1',
-          text: 'Informacje',
-          selected: true,
-          completed: false,
-        },
-        {
-          number: '2',
-          text: 'Dieta',
-          selected: false,
-          completed: false,
-        },
-        {
-          number: '3',
-          text: 'Alergeny',
-          selected: false,
-          completed: false,
-        },
-        {
-          number: '4',
-          text: 'Aktywnosc',
-          selected: false,
-          completed: false,
-        },
-        {
-          number: '5',
-          text: 'Preferencje i choroby',
-          selected: false,
-          completed: false,
-        }
-      ];
+    let buttonsProps = form.stepsInfo.buttons
       
     return (
         <div>

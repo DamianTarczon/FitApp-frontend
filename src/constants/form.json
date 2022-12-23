@@ -1,4 +1,38 @@
 {
+  "stepsInfo": {
+    "buttons": [
+      {
+        "number": "1",
+        "text": "Informacje",
+        "selected": true,
+        "completed": false
+      },
+      {
+        "number": "2",
+        "text": "Dieta",
+        "selected": false,
+        "completed": false
+      },
+      {
+        "number": "3",
+        "text": "Alergeny",
+        "selected": false,
+        "completed": false
+      },
+      {
+        "number": "4",
+        "text": "Aktywnosc",
+        "selected": false,
+        "completed": false
+      },
+      {
+        "number": "5",
+        "text": "Preferencje i choroby",
+        "selected": false,
+        "completed": false
+      }
+    ]
+  },
   "steps": [
     {
       "slug": "gender",
@@ -6,7 +40,7 @@
         {
           "name": "GenderForm",
           "title": "Wybierz swoją płeć",
-          "buttons": [{
+          "data": [{
             "form_name" : "gender",
             "value": "female",
             "text": "Jestem Kobietą",
@@ -28,7 +62,7 @@
           "name": "BasicInfoForm",
           "title": "No to zaczynamy!",
           "description" : "Na podstawie Twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp.",
-          "buttons": [{
+          "data": [{
             "form_name" : "age",
             "value": ["18","19","20","21","22","23"],
             "unit": "lat",
@@ -57,7 +91,7 @@
         {
           "name": "DietTypeForm",
           "title": "Wybierz rodzaj diety",
-          "buttons": [
+          "data": [
             {
               "value": "Reduction",
               "icon": "/path/to/icon/reductionType.png",

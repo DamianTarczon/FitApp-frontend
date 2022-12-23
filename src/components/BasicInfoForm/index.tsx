@@ -1,10 +1,10 @@
 import './index.scss';
 import { Selector } from '../../components';
-import { GenderFormProps } from '../../services/interfaces';
+import { BasicInfoFormProps } from '../../services/interfaces';
 import { Title } from '../../components'
 
-export default function BasicInfoForm(props: any) {
-  const selectors = props.buttons.map((button: any, index: any) => {
+export default function BasicInfoForm(props: BasicInfoFormProps) {
+  const selectors = props.data.map((button: any, index: any) => {
     return <Selector key={index} unit={button.unit} form_name={button.form_name} selected={button.selected} text={button.text} values={button.value} />;
   });
 
