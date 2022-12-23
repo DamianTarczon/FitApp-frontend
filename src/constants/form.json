@@ -6,7 +6,7 @@
         {
           "name": "GenderForm",
           "title": "Wybierz swoją płeć",
-          "buttons": [{
+          "data": [{
             "form_name" : "gender",
             "value": "female",
             "text": "Jestem Kobietą",
@@ -28,7 +28,7 @@
           "name": "BasicInfoForm",
           "title": "No to zaczynamy!",
           "description" : "Na podstawie Twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp.",
-          "buttons": [{
+          "data": [{
             "form_name" : "age",
             "value": ["18","19","20","21","22","23"],
             "unit": "lat",

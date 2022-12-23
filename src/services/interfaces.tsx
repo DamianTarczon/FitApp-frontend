@@ -29,8 +29,22 @@ export interface FormContainerProps {
 }
 
 export interface GenderFormProps {
-  buttons: {
+  title: string;
+  data: {
+    form_name: string;
     value: string;
+    text: string;
+    selected: boolean;
+  }[];
+}
+
+export interface BasicInfoFormProps {
+  title: string;
+  description: string;
+  data: {
+    form_name: string;
+    value: string[];
+    unit: string;
     text: string;
     selected: boolean;
   }[];
