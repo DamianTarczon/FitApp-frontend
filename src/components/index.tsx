@@ -11,6 +11,7 @@ import StepCounter from "./StepBar/StepCounter";
 import StepBarButtons from "./StepBar/StepBarButtons";
 import Title from "./Title"
 import Selector from "./Selector";
+import DietTypeForm from "./DietTypeForm";
 
 export {
     FormContainer, 
@@ -26,4 +27,5 @@ export {
     Title,
     BasicInfoForm,
     Selector,
+    DietTypeForm
 };

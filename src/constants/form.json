@@ -50,6 +50,77 @@
         }
       ],
       "next_step": "informacje-podstawowe"
+    },
+    {
+      "slug": "diet-type",
+      "children": [
+        {
+          "name": "DietTypeForm",
+          "title": "Wybierz rodzaj diety",
+          "buttons": [
+            {
+              "value": "Reduction",
+              "icon": "/path/to/icon/reductionType.png",
+              "text": "Redukcyjna",
+              "selected": true,
+              "description": {
+                "title": "Dieta redukcyjna",
+                "description": "Zauważyłaś, że tu i ówdzie Ci sie przybyto? Nie mieścisz sie juz w swoje ulubione ciuchy wiec zastanawiasz sie jak bez wszelkich wyrzeczeń zrzucić zbędną tkankę tłuszczową? Nie martw sie, możesz na nas polegać!\n\n Wybierz te opcje i zacznij drogę do wymarzonej sylwetki!"
+              }
+            },
+            {
+              "value": "Sport",
+              "icon": "/path/to/icon/sportType.png",
+              "text": "Sportowa",
+              "selected": false,
+              "description": {
+                "title": "Dieta sportowa",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "Vege",
+              "icon": "/path/to/icon/VegeType.png",
+              "text": "Wege",
+              "selected": false,
+              "description": {
+                "title": "Dieta wege",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "fitMother",
+              "icon": "/path/to/icon/fitMotherType.png",
+              "text": "Fit Mama",
+              "selected": false,
+              "description": {
+                "title": "Dieta fit mama",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "Bulking",
+              "icon": "/path/to/icon/bulkingType.png",
+              "text": "Masa",
+              "selected": false,
+              "description": {
+                "title": "Dieta na masę",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "Everyday",
+              "icon": "/path/to/icon/everydayType.png",
+              "text": "Codzienna",
+              "selected": false,
+              "description": {
+                "title": "Dieta codzienna",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }
