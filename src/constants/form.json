@@ -17,51 +17,26 @@
           }]
         }
       ],
-      "next_step": "informacje-podstawowe"
+      "next_step": "basic-info"
     },
     {
-      "slug": "informacje-podstawowe",
-      "title": "Informacje podstawowe",
+      "slug": "basic-info",
       "children": [
         {
-          "name": "TileContainer",
-          "children": [
-            {
-              "name": "InfoContainer",
-              "icon": "/path/to/icon.png",
-              "title": "Informacje podstawowe",
-              "text": "To niezwykle ważne! Na podstawie twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp."
-            },
-            {
-              "name": "DietForm",
-              "children": [
-                {
-                  "name": "DietInput",
-                  "form_name": "age",
-                  "placeholder": "Wiek",
-                  "required": true
-                },
-                {
-                  "name": "DietInput",
-                  "form_name": "height",
-                  "placeholder": "Wzrost",
-                  "required": true
-                },
-                {
-                  "name": "DietInput",
-                  "form_name": "weight",
-                  "placeholder": "Waga",
-                  "required": true
-                },
-                {
-                  "name": "DietButton",
-                  "title": "Przejdź dalej"
-                }
-              ]
-            }
-          ]
+          "name": "BasicInfoForm",
+          "title": "Wybierz swoją płeć",
+          "buttons": [{
+            "value": "female",
+            "text": "Jestem Kobietą",
+            "selected": true
+          },{
+            "value": "male",
+            "text": "Jestem Mezczyzną",
+            "selected": false
+          }]
         }
-      ]
+      ],
+      "next_step": "informacje-podstawowe"
     }
   ]
 }

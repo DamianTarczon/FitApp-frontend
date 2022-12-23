@@ -21,6 +21,7 @@ export default function Step() {
         return <Component {...child} />;
       }
     });
+    console.log(currentStep);
     const buttonsProps = [
         {
           number: '1',
