@@ -13,6 +13,7 @@ import Title from "./Title"
 import Selector from "./Selector";
 import DietTypeForm from "./DietTypeForm";
 import Description from "./Description";
+import TypeButton from "./TypeButton";
 
 export {
     FormContainer, 
@@ -29,5 +30,6 @@ export {
     BasicInfoForm,
     Selector,
     DietTypeForm,
-    Description
+    Description,
+    TypeButton
 };

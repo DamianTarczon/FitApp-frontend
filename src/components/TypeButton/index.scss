@@ -1,0 +1,32 @@
+@import "~bootstrap/scss/bootstrap";
+@import '../../styles/config';
+
+.select-button{
+    width: 159px;
+    height: 120px;
+    border-radius: 8px;
+    background-color: $button-background;
+    border: none;
+    display: inline;
+    margin: 7.5px;
+    align-items: center;
+    .icon-with-select{
+        display: flex;
+        .icon{
+            margin-left: 45%;
+        }
+        .selected-icon{
+            margin-left: 35px;
+            margin-top: -25px;
+        }
+    }
+    .text{
+        display: inline-block;
+        margin-top: 10px;
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}

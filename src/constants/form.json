@@ -83,7 +83,7 @@
           }]
         }
       ],
-      "next_step": "informacje-podstawowe"
+      "next_step": "diet-type"
     },
     {
       "slug": "diet-type",

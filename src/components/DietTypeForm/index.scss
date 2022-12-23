@@ -1,0 +1,16 @@
+.diet-type-form{
+    .title-and-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .title{
+        margin: 40px 0 0 30px;
+    }
+    .diet-buttons{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 22.5px 0 22.5px;
+        align-items: center;
+        justify-content: center;
+    }
+}
