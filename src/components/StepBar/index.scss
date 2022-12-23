@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 .footer {
   margin: 20px 30px 20px 30px;
@@ -6,8 +6,8 @@
   align-items: center;
 }
 
-@include media-breakpoint-up(lg){
-  .footer{
+@include media-breakpoint-up(lg) {
+  .footer {
     margin: 20px 188px 20px 188px;
   }
 }

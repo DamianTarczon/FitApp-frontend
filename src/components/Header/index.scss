@@ -1,5 +1,5 @@
 @import '../../styles/config';
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
 .navbar {
   margin: 20px 30px 0 30px;
@@ -11,10 +11,10 @@
   }
 }
 
-@include media-breakpoint-up(lg){
-  .navbar{
+@include media-breakpoint-up(lg) {
+  .navbar {
     margin: 30px 188px 0 188px;
-    button::after{
+    button::after {
       margin-left: 10px;
       content: $help-button-content;
       font-family: $primary-font;

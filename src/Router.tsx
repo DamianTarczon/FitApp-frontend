@@ -6,7 +6,7 @@ export default function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/form/:step' element={<Step />} />
+        <Route path="/form/:step" element={<Step />} />
       </Routes>
     </BrowserRouter>
   );

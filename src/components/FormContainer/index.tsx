@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './index.scss';
 import { GenderForm } from '../../components';
 import { FormContainerProps } from '../../services/interfaces';
-import { desktopBackgroundList, mobileBackgroundList } from '../../assets/backgrounds';
+import { desktopBackgroundList, mobileBackgroundList } from '../../utils/backgrounds';
 
 export default function FormContainer({ content }: any) {
   const [width, setWidth] = useState<number>(window.innerWidth);
@@ -33,7 +33,7 @@ export default function FormContainer({ content }: any) {
 
   return (
     <div className="form-container" style={style}>
-     {content}
+      {content}
     </div>
   );
 }

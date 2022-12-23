@@ -31,4 +31,17 @@ export default function DietTypeForm(props: any) {
             />
         </div>
     );
+  });
+
+  const description = props.buttons.filter((button: any) => button.selected)[0].description;
+
+  return (
+    <div className="diet-type-form">
+      <div className="title-and-buttons">
+        <Title title={props.title} />
+        {buttons}
+      </div>
+      <Description title={description.title} text={description.description} />
+    </div>
+  );
 }

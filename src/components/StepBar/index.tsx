@@ -1,22 +1,20 @@
-import { StepBarButtons } from '../../components'
+import { StepBarButtons } from '../../components';
 import { StepHeaderProps } from '../../services/interfaces';
 import { StepCounter } from '../../components';
-import './index.scss'
+import './index.scss';
 
 export default function StepBar(props: StepHeaderProps) {
   const selectedButton = props.buttons.filter((button) => button.selected)[0];
 
   return (
     <div className="footer">
-      <StepCounter 
+      <StepCounter
         number={selectedButton.number}
         selected={selectedButton.selected}
         completed={selectedButton.completed}
         numberOfButtons={props.buttons.length}
       />
-      <StepBarButtons 
-        number={selectedButton.number}
-      />
+      <StepBarButtons number={selectedButton.number} />
     </div>
   );
 }

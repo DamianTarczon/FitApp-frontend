@@ -40,17 +40,22 @@
         {
           "name": "GenderForm",
           "title": "Wybierz swoją płeć",
-          "data": [{
-            "form_name" : "gender",
-            "value": "female",
-            "text": "Jestem Kobietą",
-            "selected": true
-          },{
-            "form_name" : "gender",
-            "value": "male",
-            "text": "Jestem Mezczyzną",
-            "selected": false
-          }]
+          "data": [
+            {
+              "form_name": "gender",
+              "value": "female",
+              "icon": "/assets/icons/female-icon.svg",
+              "text": "Jestem Kobietą",
+              "selected": true
+            },
+            {
+              "form_name": "gender",
+              "value": "male",
+              "icon": "/assets/icons/male-icon.svg",
+              "text": "Jestem Mezczyzną",
+              "selected": false
+            }
+          ]
         }
       ],
       "next_step": "basic-info"
@@ -61,26 +66,30 @@
         {
           "name": "BasicInfoForm",
           "title": "No to zaczynamy!",
-          "description" : "Na podstawie Twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp.",
-          "data": [{
-            "form_name" : "age",
-            "value": ["18","19","20","21","22","23"],
-            "unit": "lat",
-            "text": "Wiek",
-            "selected": false
-          },{
-            "form_name" : "height",
-            "value": ["170","175","180","185","190","195"],
-            "unit": "cm",
-            "text": "Wzrost",
-            "selected": false
-          },{
-            "form_name" : "Weight",
-            "value": ["50","55","60","65","70","75"],
-            "unit": "kg",
-            "text": "Waga",
-            "selected": false
-          }]
+          "description": "Na podstawie Twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp.",
+          "data": [
+            {
+              "form_name": "age",
+              "value": ["18", "19", "20", "21", "22", "23"],
+              "unit": "lat",
+              "text": "Wiek",
+              "selected": false
+            },
+            {
+              "form_name": "height",
+              "value": ["170", "175", "180", "185", "190", "195"],
+              "unit": "cm",
+              "text": "Wzrost",
+              "selected": false
+            },
+            {
+              "form_name": "Weight",
+              "value": ["50", "55", "60", "65", "70", "75"],
+              "unit": "kg",
+              "text": "Waga",
+              "selected": false
+            }
+          ]
         }
       ],
       "next_step": "diet-type"
@@ -155,6 +164,82 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "allergens",
+      "children": [
+        {
+          "name": "AllergensForm",
+          "title": "Wybierz alergeny",
+          "description": "Czy cierpisz na alergie pokarmowe?",
+          "data": [
+            {
+              "form_name": "allergens",
+              "value": "egg",
+              "icon": "/assets/icons/egg.svg",
+              "text": "Jajka",
+              "selected": true
+            },
+            {
+              "form_name": "allergens",
+              "value": "cow_milk",
+              "icon": "/assets/icons/cow.svg",
+              "text": "Mleko krowie",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "fish_and_sea_fruits",
+              "icon": "/assets/icons/fish.svg",
+              "text": "Ryby i owoce morza",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "wheat",
+              "icon": "/assets/icons/wheat.svg",
+              "text": "Pszenica",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "gluten_wheats",
+              "icon": "/assets/icons/wheat_crossed.svg",
+              "text": "Zboża z glutenem",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "nuts",
+              "icon": "/assets/icons/nut.svg",
+              "text": "Orzechy",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "peanuts",
+              "icon": "/assets/icons/peanut.svg",
+              "text": "Orzechy ziemne",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "soy",
+              "icon": "/assets/icons/soy.svg",
+              "text": "Soja",
+              "selected": false
+            },
+            {
+              "form_name": "allergens",
+              "value": "no_allergens",
+              "icon": "/assets/icons/cross.svg",
+              "text": "Brak alergenów",
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "next_step": "basic-info"
     }
   ]
 }
