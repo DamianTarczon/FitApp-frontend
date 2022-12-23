@@ -5,13 +5,15 @@ import { Title } from '../../components'
 
 export default function GenderForm(props: any) {
   const radioSelectors = props.buttons.map((button: any, index: any) => {
-    return <RadioSelector key={index} selected={button.selected} text={button.text} gender={button.value} />;
+    return <RadioSelector key={index} form_name={button.form_name} selected={button.selected} text={button.text} value={button.value} />;
   });
 
   return (
-    <form className="form">
+    <form className="gender-form">
       <Title title={props.title}/>
+      <div className="selector-container">
       {radioSelectors}
+      </div>
     </form>
   );
 }

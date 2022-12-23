@@ -1,0 +1,69 @@
+@import "~bootstrap/scss/bootstrap";
+@import '../../styles/config';
+
+select {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px 0px 24px;
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  background-size: 1em;
+  background-image: url("../../assets/selector-arrow.svg");
+
+}
+
+
+.select-label {
+  position: absolute;
+  top: 13px;
+  left: 25px;
+  color: #878DAB;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.select-container{
+  position: relative;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  width: 333px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.select-icon {
+  margin-top: 15px;
+}
+
+.gender-icon {
+  display: flex;
+  align-self: center;
+}
+
+.select-text {
+  display: flex;
+  align-self: center;
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0px auto 0px 25px;
+}
+
+@include media-breakpoint-up(lg){
+  .select-container {
+    width: 273px;
+    height: 60px;
+  }
+}

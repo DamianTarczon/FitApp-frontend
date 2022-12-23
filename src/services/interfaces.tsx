@@ -37,9 +37,18 @@ export interface GenderFormProps {
 }
 
 export interface RadioSelectorProps {
-    gender: string,
+    form_name: string,
+    value: string,
     text: string,
     selected: boolean,
+}
+
+export interface SelectorProps {
+  form_name: string,
+  values: string[],
+  unit: string,
+  text: string,
+  selected: boolean,
 }
 
 export interface StepCounterProps{

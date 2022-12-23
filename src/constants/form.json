@@ -7,10 +7,12 @@
           "name": "GenderForm",
           "title": "Wybierz swoją płeć",
           "buttons": [{
+            "form_name" : "gender",
             "value": "female",
             "text": "Jestem Kobietą",
             "selected": true
           },{
+            "form_name" : "gender",
             "value": "male",
             "text": "Jestem Mezczyzną",
             "selected": false
@@ -24,14 +26,25 @@
       "children": [
         {
           "name": "BasicInfoForm",
-          "title": "Wybierz swoją płeć",
+          "title": "No to zaczynamy!",
+          "description" : "Na podstawie Twoich danych jesteśmy w stanie określić twoje zapotrzebowanie na różne składniki, określić dietę, itp.",
           "buttons": [{
-            "value": "female",
-            "text": "Jestem Kobietą",
-            "selected": true
+            "form_name" : "age",
+            "value": ["18","19","20","21","22","23"],
+            "unit": "lat",
+            "text": "Wiek",
+            "selected": false
           },{
-            "value": "male",
-            "text": "Jestem Mezczyzną",
+            "form_name" : "height",
+            "value": ["170","175","180","185","190","195"],
+            "unit": "cm",
+            "text": "Wzrost",
+            "selected": false
+          },{
+            "form_name" : "Weight",
+            "value": ["50","55","60","65","70","75"],
+            "unit": "kg",
+            "text": "Waga",
             "selected": false
           }]
         }
