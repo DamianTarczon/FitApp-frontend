@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 @import '../../styles/config';
 
 .gender-select-button {
@@ -9,6 +9,14 @@
   border: none;
   display: flex;
   padding: 0px 15px 0px 30px;
+}
+
+.allergen-form {
+  .selector-container {
+    .gender-select-button {
+      height: 60px;
+    }
+  }
 }
 
 .select-icon {
@@ -31,7 +39,7 @@
   margin: 0px auto 0px 25px;
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .gender-select-button {
     width: 40.5%;
     min-width: 300px;

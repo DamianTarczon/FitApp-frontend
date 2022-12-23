@@ -39,6 +39,18 @@ export interface GenderFormProps {
   }[];
 }
 
+export interface AllergensFormProps {
+  title: string;
+  description: string;
+  data: {
+    form_name: string;
+    value: string;
+    icon: string;
+    text: string;
+    selected: boolean;
+  }[];
+}
+
 export interface BasicInfoFormProps {
   title: string;
   description: string;
@@ -52,24 +64,24 @@ export interface BasicInfoFormProps {
 }
 
 export interface RadioSelectorProps {
-    form_name: string,
-    value: string,
-    icon: string,
-    text: string,
-    selected: boolean,
+  form_name: string;
+  value: string;
+  icon: string;
+  text: string;
+  selected: boolean;
 }
 
 export interface SelectorProps {
-  form_name: string,
-  values: string[],
-  unit: string,
-  text: string,
-  selected: boolean,
+  form_name: string;
+  values: string[];
+  unit: string;
+  text: string;
+  selected: boolean;
 }
 
-export interface StepCounterProps{
-    number: string,
-    selected: boolean,
-    completed: boolean,
-    numberOfButtons: number
+export interface StepCounterProps {
+  number: string;
+  selected: boolean;
+  completed: boolean;
+  numberOfButtons: number;
 }

@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 //mobile styling
 .step-header-container {
   height: 80px;
@@ -16,13 +16,11 @@
 }
 //end mobile styling
 
-
 //desktop styling
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .step-header-container {
     padding: 0px 188px;
     gap: 55px;
   }
-
 }
 //end desktopstyling

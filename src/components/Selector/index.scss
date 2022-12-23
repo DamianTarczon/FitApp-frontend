@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+@import '~bootstrap/scss/bootstrap';
 @import '../../styles/config';
 
 select {
@@ -11,16 +11,14 @@ select {
   background-repeat: no-repeat;
   background-position: right 22px center;
   background-size: 1em;
-  background-image: url("../../assets/selector-arrow.svg");
-
+  background-image: url('../../assets/selector-arrow.svg');
 }
-
 
 .select-label {
   position: absolute;
   top: 13px;
   left: 25px;
-  color: #878DAB;
+  color: #878dab;
   font-family: $primary-font;
   font-style: normal;
   font-weight: 500;
@@ -28,7 +26,7 @@ select {
   line-height: 14px;
 }
 
-.select-container{
+.select-container {
   position: relative;
   font-family: $primary-font;
   font-style: normal;
@@ -61,7 +59,7 @@ select {
   margin: 0px auto 0px 25px;
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .select-container {
     width: 23.43%;
     min-width: 185px;

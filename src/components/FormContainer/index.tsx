@@ -33,7 +33,7 @@ export default function FormContainer({ content }: any) {
 
   return (
     <div className="form-container" style={style}>
-     {content}
+      {content}
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import { headsetIcon } from "../../utils/svg_icons";
-import './index.scss'
-import { headerTitle } from "../../utils/svg_icons";
+import { headsetIcon } from '../../utils/svg_icons';
+import './index.scss';
+import { headerTitle } from '../../utils/svg_icons';
 
 export default function Header() {
   return (
@@ -8,9 +8,7 @@ export default function Header() {
       <a className="navbar-brand" href="/">
         {headerTitle}
       </a>
-      <button>
-        {headsetIcon}
-      </button>
+      <button>{headsetIcon}</button>
     </nav>
   );
 }
