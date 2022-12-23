@@ -6,6 +6,7 @@ import { Description } from "../../components"
 export default function DietTypeForm(props: any) {
     const buttons = props.buttons.map((button: any, index: any) => {
         return <RadioSelector 
+            icon=""
             key={index}
             form_name='name'
             selected={button.selected}

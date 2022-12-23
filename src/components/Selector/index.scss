@@ -35,7 +35,7 @@ select {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  width: 333px;
+  width: 100%;
   height: 60px;
   border-radius: 8px;
   background-color: #fff;
@@ -63,7 +63,8 @@ select {
 
 @include media-breakpoint-up(lg){
   .select-container {
-    width: 273px;
+    width: 23.43%;
+    min-width: 185px;
     height: 60px;
   }
 }
