@@ -98,66 +98,72 @@
       "slug": "diet-type",
       "children": [
         {
-          "name": "DietTypeForm",
+          "name": "DietTypeAndActivityForm",
           "title": "Wybierz rodzaj diety",
           "data": [
             {
               "value": "Reduction",
-              "icon": "/assets/icons/slim-body.svg",
+              "icon": "/assets/icons/dietType/slim-body.svg",
               "text": "Redukcyjna",
               "selected": true,
               "description": {
                 "title": "Dieta redukcyjna",
+                "video": "https://www.youtube.com/",
                 "description": "Zauważyłaś, że tu i ówdzie Ci sie przybyto? Nie mieścisz sie juz w swoje ulubione ciuchy wiec zastanawiasz sie jak bez wszelkich wyrzeczeń zrzucić zbędną tkankę tłuszczową? Nie martw sie, możesz na nas polegać!\n\nWybierz te opcje i zacznij drogę do wymarzonej sylwetki!"
               }
             },
             {
               "value": "Sport",
-              "icon": "/assets/icons/ball-of-basketball.svg",
+              "icon": "/assets/icons/dietType/ball-of-basketball.svg",
               "text": "Sportowa",
               "selected": false,
               "description": {
                 "title": "Dieta sportowa",
+                "video": "https://www.youtube.com/",
                 "description": "Jakiś randomowy tekst dla testów"
               }
             },
             {
               "value": "Vege",
-              "icon": "/assets/icons/carrot.svg",
+              "icon": "/assets/icons/dietType/carrot.svg",
               "text": "Wege",
               "selected": false,
               "description": {
                 "title": "Dieta wege",
+                "video": "https://www.youtube.com/",
                 "description": "Jakiś randomowy tekst dla testów"
               }
             },
             {
               "value": "fitMother",
-              "icon": "/assets/icons/fit-mama.svg",
+              "icon": "/assets/icons/dietType/fit-mama.svg",
               "text": "Fit Mama",
               "selected": false,
               "description": {
                 "title": "Dieta fit mama",
+                "video": "https://www.youtube.com/",
                 "description": "Jakiś randomowy tekst dla testów"
               }
             },
             {
               "value": "Bulking",
-              "icon": "/assets/icons/arm-muscle.svg",
+              "icon": "/assets/icons/dietType/arm-muscle.svg",
               "text": "Masa",
               "selected": false,
               "description": {
                 "title": "Dieta na masę",
+                "video": "https://www.youtube.com/",
                 "description": "Jakiś randomowy tekst dla testów"
               }
             },
             {
               "value": "Everyday",
-              "icon": "/assets/icons/suitcase.svg",
+              "icon": "/assets/icons/dietType/suitcase.svg",
               "text": "Codzienna",
               "selected": false,
               "description": {
                 "title": "Dieta codzienna",
+                "video": "https://www.youtube.com/",
                 "description": "Jakiś randomowy tekst dla testów"
               }
             }
@@ -235,6 +241,84 @@
               "icon": "/assets/icons/cross.svg",
               "text": "Brak alergenów",
               "selected": false
+            }
+          ]
+        }
+      ],
+      "next_step": "activity"
+    },
+    {
+      "slug": "activity",
+      "children": [
+        {
+          "name": "DietTypeAndActivityForm",
+          "title": "Oceń swoją aktywność",
+          "data": [
+            {
+              "value": "low",
+              "icon": "/assets/icons/activity/dumbbell-low.svg",
+              "text": "Niska",
+              "selected": true,
+              "trainings": "Brak treningów",
+              "description": {
+                "title": "Niska aktywność",
+                "description": "Jesteś leniuszkiem, który nie rusza swojego tyłka sprzed telewizora"
+              }
+            },
+            {
+              "value": "light",
+              "icon": "/assets/icons/activity/dumbbell-light.svg",
+              "text": "Lekka",
+              "selected": false,
+              "trainings": "1-2 treningi w tyg.",
+              "description": {
+                "title": "Lekka aktywność",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "middle",
+              "icon": "/assets/icons/activity/dumbbell-mid.svg",
+              "text": "Średnia",
+              "selected": false,
+              "trainings": "3-4 treningi w tyg.",
+              "description": {
+                "title": "Średnia aktywność",
+                "description": "Czyli wychodzi na to, że trenujesz 3-4 razy w tygodniu, a Twoja praca wymaga od Ciebie ruchu fizycznego"
+              }
+            },
+            {
+              "value": "High",
+              "icon": "/assets/icons/activity/dumbbell-high.svg",
+              "text": "Wysoka",
+              "selected": false,
+              "trainings": "4-5 treningi w tyg.",
+              "description": {
+                "title": "Wysoka aktywność",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "Very high",
+              "icon": "/assets/icons/activity/dumbbells-very-high.svg",
+              "text": "Bardzo wysoka",
+              "selected": false,
+              "trainings": "5-7 treningi w tyg.",
+              "description": {
+                "title": "Bardzo wysoka aktywność",
+                "description": "Jakiś randomowy tekst dla testów"
+              }
+            },
+            {
+              "value": "Extreme",
+              "icon": "/assets/icons/activity/dumbbells-extreme.svg",
+              "text": "Ekstremalna",
+              "selected": false,
+              "trainings": "+7 treningów w tyg.",
+              "description": {
+                "title": "Ekstremalna aktywność",
+                "description": "Sportowy świr, dla którego niemożliwe nie istnieje"
+              }
             }
           ]
         }

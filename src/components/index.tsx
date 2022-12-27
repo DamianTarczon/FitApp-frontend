@@ -11,7 +11,7 @@ import StepCounter from './StepBar/StepCounter';
 import StepBarButtons from './StepBar/StepBarButtons';
 import Title from './Title';
 import Selector from './Selector';
-import DietTypeForm from './DietTypeForm';
+import DietTypeAndActivityForm from './DietTypeAndActivityForm';
 import Description from './Description';
 import AllergensForm from './AllergensForm';
 import TypeButton from "./TypeButton";
@@ -32,7 +32,7 @@ export {
   Title,
   BasicInfoForm,
   Selector,
-  DietTypeForm,
+  DietTypeAndActivityForm,
   Description,
   AllergensForm,
   TypeButton,

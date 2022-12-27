@@ -7,9 +7,11 @@ export default function Description(props: any){
             <div className='description-text'>
                 {props.text}
             </div>
-            <br/>
-            <br/>
-            <a href="https://www.youtube.com/"> Zobacz video</a>
+            {props.video && 
+            <>
+                <br/>
+                <a href={props.video}><img src="/assets/icons/film.svg" />Zobacz video</a>
+            </>}
         </div>
     );
 }

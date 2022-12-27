@@ -1,9 +1,9 @@
 import './index.scss';
-import { Title } from '../../components'
-import { TypeButton } from "../../components"
-import { Description } from "../../components"
+import { Title } from '..'
+import { TypeButton } from ".."
+import { Description } from ".."
 
-export default function DietTypeForm(props: any) {
+export default function DietTypeAndActivityForm(props: any) {
     const buttons = props.data.map((button: any, index: number) => {
         return <TypeButton 
             key={index}
@@ -12,6 +12,7 @@ export default function DietTypeForm(props: any) {
             text={button.text}
             value={button.value}
             icon={button.icon}
+            trainings={button.trainings}
         />
     });
 
@@ -28,6 +29,7 @@ export default function DietTypeForm(props: any) {
             <Description 
                 title={description.title}
                 text={description.description}
+                video={description.video}
             />
         </div>
     );
