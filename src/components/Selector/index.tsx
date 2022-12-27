@@ -13,7 +13,7 @@ export default function Selector(props: SelectorProps) {
   return (
     <div className="select-container">
       <label className="select-label">{props.text}</label>
-      <select className="select-button">{options}</select>
+      <select>{options}</select>
     </div>
   );
 }
