@@ -1,0 +1,104 @@
+@import '~bootstrap/scss/bootstrap';
+
+.diseases-form {
+  height: fit-content;
+  width: 84.73%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 56px;
+  margin-bottom: 50px;
+}
+
+.diseases-form {
+  .diseases-form-container {
+    .radio-selector-button{
+      .select-text{
+        text-align: left;
+      }
+    }
+    .radio-selector-button:last-child {
+      background-color: transparent;
+      margin-top: 31px;
+      height: auto;
+      padding: 0;
+      .radio-icon {
+        margin: auto;
+        margin-right: 19px;
+      }
+      .select-text {
+        margin-left: 0;
+        font-family: 'Urbane';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-decoration: underline;
+      }
+      .select-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+.diseases-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 40px;
+}
+.description {
+  margin-top: 20px;
+  font-family: 'Urbane';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 26px;
+  color: #1f1939;
+  opacity: 0.7;
+  width: 100%;
+}
+
+@include media-breakpoint-up(lg) {
+  .description {
+    margin-top: 32px;
+    margin-right: 58.71%;
+    margin-bottom: 53px;
+  }
+  .diseases-form {
+    .description {
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+    .diseases-form-container {
+      margin-top: 50px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 24px 2.06%;
+      .radio-selector-button:last-child {
+        background-color: transparent;
+        margin-left: auto;
+        margin-right: 0;
+        .select-text{
+          margin-right: 0;
+        }
+      }
+      .radio-selector-button{
+        height: 80px;
+        width: 23.33%;
+        min-width: unset;
+        .select-text {
+          text-align: left;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  
+  .diseases-form {
+    width: 100%;
+    margin-top: 62px;
+    margin-bottom: 128px;
+  }
+}

@@ -17,6 +17,7 @@ import AllergensForm from './AllergensForm';
 import TypeButton from "./TypeButton";
 import BigRadioSelector from './BigRadioSelector';
 import MealNumberForm from './MealNumberForm';
+import DiseasesForm from './DiseasesForm';
 
 export {
   FormContainer,
@@ -37,5 +38,6 @@ export {
   AllergensForm,
   TypeButton,
   BigRadioSelector,
-  MealNumberForm
+  MealNumberForm,
+  DiseasesForm
 };
