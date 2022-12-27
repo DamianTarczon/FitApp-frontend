@@ -15,6 +15,8 @@ import DietTypeForm from './DietTypeForm';
 import Description from './Description';
 import AllergensForm from './AllergensForm';
 import TypeButton from "./TypeButton";
+import BigRadioSelector from './BigRadioSelector';
+import MealNumberForm from './MealNumberForm';
 
 export {
   FormContainer,
@@ -33,5 +35,7 @@ export {
   DietTypeForm,
   Description,
   AllergensForm,
-  TypeButton
+  TypeButton,
+  BigRadioSelector,
+  MealNumberForm
 };
