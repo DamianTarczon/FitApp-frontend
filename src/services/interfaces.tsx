@@ -51,6 +51,17 @@ export interface AllergensFormProps {
   }[];
 }
 
+export interface DiseasesFormProps {
+  title: string;
+  data: {
+    form_name: string;
+    value: string;
+    icon: string;
+    text: string;
+    selected: boolean;
+  }[];
+}
+
 export interface MealNumberFormProps {
   title: string;
   data: {
@@ -81,6 +92,7 @@ export interface RadioSelectorProps {
   icon: string;
   text: string;
   selected: boolean;
+  isLast?: boolean;
 }
 
 export interface BigRadioSelectorProps {

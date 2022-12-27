@@ -360,6 +360,123 @@
         }
       ],
       "next_step": "basic-info"
+    },
+    {
+      "slug": "diseases",
+      "children": [
+        {
+          "name": "DiseasesForm",
+          "title": "Czy jesteś na coś chory?",
+          "data": [
+            {
+              "form_name": "diseases",
+              "value": "choroby-sercowo-naczyniowe",
+              "icon": "",
+              "text": "Choroby sercowo-naczyńkowe",
+              "selected": true
+            },
+            {
+              "form_name": "diseases",
+              "value": "miazdzyca",
+              "icon": "",
+              "text": "Miażdżyca",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "insulino-oporność",
+              "icon": "",
+              "text": "Insulino-oporność",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "cukrzyca",
+              "icon": "",
+              "text": "Cukrzyca",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "anemia",
+              "icon": "",
+              "text": "Anemia",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "choroby-nerek",
+              "icon": "",
+              "text": "Choroby nerek",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "choroby-watroby",
+              "icon": "",
+              "text": "Choroby wątroby",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "choroby-przewodu-pokarmowego",
+              "icon": "",
+              "text": "Choroby przewodu pokarmowego",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "celiaka",
+              "icon": "",
+              "text": "Celiaka",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "nietolerancja-laktozy",
+              "icon": "",
+              "text": "Nietolerancja laktozy",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "osteoporoza",
+              "icon": "",
+              "text": "Osteoporoza",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "nowotwory",
+              "icon": "",
+              "text": "Nowotwory",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "zespol-jajnikow-policystycznych",
+              "icon": "",
+              "text": "Zespół jajników policystycznych",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "zespol-jelita-drazniwego",
+              "icon": "",
+              "text": "Zespół jelita drażniwego",
+              "selected": false
+            },
+            {
+              "form_name": "diseases",
+              "value": "brak",
+              "icon": "/assets/icons/cross.svg",
+              "text": "Brak chorób",
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "next_step": "basic-info"
     }
   ]
 }
