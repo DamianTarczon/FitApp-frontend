@@ -53,6 +53,9 @@
   .big-radio-button {
     width: 40.5%;
     min-width: 300px;
-    height: 100px;
+    min-height: 207px;
+    .big-radio-description {
+      margin: 30px 30px 30px 30px;
+    }
   }
 }
