@@ -4,14 +4,14 @@ import { TypeButton } from "../../components"
 import { Description } from "../../components"
 
 export default function DietTypeForm(props: any) {
-    const buttons = props.data.map((button: any, index: any) => {
+    const buttons = props.data.map((button: any, index: number) => {
         return <TypeButton 
             key={index}
             form_name='name'
             selected={button.selected}
             text={button.text}
             value={button.value}
-
+            icon={button.icon}
         />
     });
 

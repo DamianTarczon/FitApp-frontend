@@ -1,3 +1,6 @@
+@import "~bootstrap/scss/bootstrap";
+
+
 .diet-type-form{
     .title-and-buttons{
         display: flex;
@@ -10,7 +13,51 @@
         display: flex;
         flex-wrap: wrap;
         margin: 20px 22.5px 0 22.5px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .diet-buttons{
         align-items: center;
         justify-content: center;
     }
+}
+
+
+@include media-breakpoint-up(md) {
+    .diet-type-form{
+        display: flex;
+        margin-bottom: 50px;
+        .title-and-buttons{
+            min-width: 475px;
+            .select-button{
+                margin: 12px;
+                width: 174px;
+                height: 130px;
+            }
+        }
+        .diet-buttons{
+            margin: 20px 18px 0 18px;
+        }
+        .description-div{
+            margin-top: 95px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .diet-type-form{
+        margin-top: 30px;
+        margin-left: -30px;
+        .title-and-buttons{
+            min-width: 70%;
+            max-width: 600px;
+        }
+        .description-div{
+            margin-top: 95px;
+            max-width: 500px;
+            min-width: 300px;
+        }
+    }
+    
 }
