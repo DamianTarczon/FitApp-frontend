@@ -1,17 +1,19 @@
+@import '../../styles/config';
+
 .description-div{
     display: flex;
     flex-direction: column;
     margin: 50px 30px 50px 30px;
-    color: #1F1939;
+    color: $dark-blue;
     .description-title{
-        font-family: 'Urbane';
+        font-family: $primary-font;
         font-style: normal;
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
     }
     .description-text{
-        font-family: 'Urbane';
+        font-family: $primary-font;
         font-style: normal;
         font-weight: 500;
         font-size: 14px;
@@ -22,6 +24,14 @@
     }
     img{
         margin-right: 20px;
+    }
+    p{
+        font-family: 'Urbane';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-blue;
     }
     
 }

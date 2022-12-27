@@ -16,7 +16,7 @@ export default function DietTypeAndActivityForm(props: any) {
         />
     });
 
-    const description= props.data.filter((button: any) => button.selected)[0].description;
+    const selectedButton= props.data.filter((button: any) => button.selected)[0];
     
     return(
         <div className='diet-type-form'>
@@ -27,9 +27,10 @@ export default function DietTypeAndActivityForm(props: any) {
                 </div>
             </div>
             <Description 
-                title={description.title}
-                text={description.description}
-                video={description.video}
+                title={selectedButton.description.title}
+                text={selectedButton.description.description}
+                video={selectedButton.description.video}
+                trainings={selectedButton.trainings}
             />
         </div>
     );
