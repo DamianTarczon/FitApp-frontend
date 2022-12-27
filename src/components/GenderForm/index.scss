@@ -9,7 +9,7 @@
   margin-bottom: 156px;
 }
 
-.selector-container {
+.gender-form-container {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -17,7 +17,7 @@
 }
 
 @include media-breakpoint-up(lg) {
-  .selector-container {
+  .gender-form-container {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;

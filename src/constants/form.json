@@ -239,6 +239,42 @@
           ]
         }
       ],
+      "next_step": "meal-number"
+    },
+    {
+      "slug": "meal-number",
+      "children": [
+        {
+          "name": "MealNumberForm",
+          "title": "Wybierz liczbę posiłków",
+          "data": [
+            {
+              "form_name": "meal-number",
+              "value": "5",
+              "icon": "/assets/icons/bowl5.svg",
+              "text": "5 posiłków",
+              "description": "Śniadanie, obiad, podwieczorek, kolacja oraz coś na słodko",
+              "selected": true
+            },
+            {
+              "form_name": "meal-number",
+              "value": "4",
+              "icon": "/assets/icons/bowl4.svg",
+              "text": "4 posiłki",
+              "description": "Śniadanie, obiad, kolacja i przekąska",
+              "selected": false
+            },
+            {
+              "form_name": "meal-number",
+              "value": "3",
+              "icon": "/assets/icons/bowl3.svg",
+              "text": "3 posiłki",
+              "description": "Śniadanie, obiad i kolacja",
+              "selected": false
+            }
+          ]
+        }
+      ],
       "next_step": "basic-info"
     }
   ]

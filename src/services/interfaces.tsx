@@ -51,6 +51,18 @@ export interface AllergensFormProps {
   }[];
 }
 
+export interface MealNumberFormProps {
+  title: string;
+  data: {
+    form_name: string;
+    value: string;
+    icon: string;
+    text: string;
+    description: string;
+    selected: boolean;
+  }[];
+}
+
 export interface BasicInfoFormProps {
   title: string;
   description: string;
@@ -68,6 +80,15 @@ export interface RadioSelectorProps {
   value: string;
   icon: string;
   text: string;
+  selected: boolean;
+}
+
+export interface BigRadioSelectorProps {
+  form_name: string;
+  value: string;
+  icon: string;
+  text: string;
+  description: string;
   selected: boolean;
 }
 

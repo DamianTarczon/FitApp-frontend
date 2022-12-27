@@ -10,13 +10,13 @@
 }
 
 .allergen-form {
-  .selector-container {
-    .gender-select-button:last-child {
+  .allergen-form-container {
+    .radio-selector-button:last-child {
       background-color: transparent;
       margin-top: 31px;
       height: auto;
       padding: 0;
-      .gender-icon {
+      .radio-icon {
         margin: auto;
         margin-right: 19px;
       }
@@ -36,7 +36,7 @@
   }
 }
 
-.selector-container {
+.allergen-form-container {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -65,20 +65,20 @@
       margin-top: 25px;
       margin-bottom: 0;
     }
-    .selector-container {
+    .allergen-form-container {
       margin-top: 50px;
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
       gap: 24px 2.06%;
-      .gender-select-button:last-child {
+      .radio-selector-button:last-child {
         margin-left: auto;
         margin-right: 0;
         .select-text{
           margin-right: 0;
         }
       }
-      .gender-select-button{
+      .radio-selector-button{
         height: 80px;
         width: 23.33%;
         min-width: unset;

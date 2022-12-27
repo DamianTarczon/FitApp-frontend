@@ -1,27 +1,27 @@
 import './index.scss';
-import { RadioSelector } from '..';
-import { AllergensFormProps } from '../../services/interfaces';
+import { BigRadioSelector } from '..';
+import { MealNumberFormProps } from '../../services/interfaces';
 import { Title } from '..';
 
-export default function AllergensForm(props: AllergensFormProps) {
+export default function MealNumberForm(props: MealNumberFormProps) {
   const radioSelectors = props.data.map((button: any, index: any) => {
     return (
-      <RadioSelector
+      <BigRadioSelector
         key={index}
         icon={button.icon}
         form_name={button.form_name}
         selected={button.selected}
         text={button.text}
+        description={button.description}
         value={button.value}
       />
     );
   });
 
   return (
-    <form className="allergen-form">
+    <form className="meal-number-form">
       <Title title={props.title} />
-      <div className="description">{props.description}</div>
-      <div className="allergen-form-container">{radioSelectors}</div>
+      <div className="meal-number-form-container">{radioSelectors}</div>
     </form>
   );
 }

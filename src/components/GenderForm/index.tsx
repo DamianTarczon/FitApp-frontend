@@ -20,7 +20,7 @@ export default function GenderForm(props: GenderFormProps) {
   return (
     <form className="gender-form">
       <Title title={props.title} />
-      <div className="selector-container">{radioSelectors}</div>
+      <div className="gender-form-container">{radioSelectors}</div>
     </form>
   );
 }
