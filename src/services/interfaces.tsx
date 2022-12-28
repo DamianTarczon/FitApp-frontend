@@ -118,3 +118,47 @@ export interface StepCounterProps {
   completed: boolean;
   numberOfButtons: number;
 }
+
+export interface DescriptionProps {
+  text: string;
+  title: string;
+  trainings: {
+    number: string;
+    shortDescription: string;
+  };
+  video: string;
+}
+
+export interface TypeButtonProps {
+  form_name: string;
+  icon: string;
+  selected: boolean;
+  text: string;
+  trainings: {
+    number: string;
+    shortDescription: string;
+  };
+  value: string;
+}
+
+export interface ButtonProps{
+  value: string;
+  icon: string;
+  text: string;
+  selected: boolean;
+  trainings: {
+    number: string;
+    shortDescription: string;
+  };
+  description: {
+    title: string;
+    description: string;
+    video: string;
+  };
+}
+
+export interface DietTypeAndActivityFormProps {
+  name: string;
+  title: string;
+  data: ButtonProps[]
+}

@@ -2,9 +2,10 @@ import './index.scss';
 import { Title } from '..'
 import { TypeButton } from ".."
 import { Description } from ".."
+import { ButtonProps, DietTypeAndActivityFormProps } from '../../services/interfaces';
 
-export default function DietTypeAndActivityForm(props: any) {
-    const buttons = props.data.map((button: any, index: number) => {
+export default function DietTypeAndActivityForm(props: DietTypeAndActivityFormProps) {
+    const buttons = props.data.map((button: ButtonProps, index: number) => {
         return <TypeButton 
             key={index}
             form_name='name'
@@ -16,7 +17,7 @@ export default function DietTypeAndActivityForm(props: any) {
         />
     });
 
-    const selectedButton= props.data.filter((button: any) => button.selected)[0];
+    const selectedButton= props.data.filter((button: ButtonProps) => button.selected)[0];
     
     return(
         <div className='diet-type-form'>
