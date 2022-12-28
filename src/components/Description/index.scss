@@ -34,4 +34,14 @@
         color: $dark-blue;
     }
     
+    .training-description{
+        display: flex;
+        margin-top: 30px;
+        .vl{
+            border-left: 3px solid $green ;
+            height: 15px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
 }

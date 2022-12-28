@@ -1,5 +1,4 @@
 import './index.scss';
-import { leftArrowIcon, rightArrowIcon } from '../../../utils/svg_icons';
 
 export default function StepBarButtons(props: { number: string }) {
   const style = {
@@ -9,12 +8,11 @@ export default function StepBarButtons(props: { number: string }) {
   return (
     <div className="buttons">
       <button className="previous" style={style}>
-        {leftArrowIcon}
+        <img src="/assets/icons/arrow-left.svg"/>
       </button>
       <button className="next">
-        {/* Zapytać się gdzie wstawić słowo 'Dalej' jako zmienną */}
         Dalej
-        {rightArrowIcon}
+        <img src="/assets/icons/arrow-right.svg"/>
       </button>
     </div>
   );

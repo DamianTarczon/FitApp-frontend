@@ -10,6 +10,9 @@
     background-color: $grey;
     align-items: center;
     padding: 0 15px;
+    img{
+      margin-top: -4px;
+    }
   }
   .next {
     background-color: $green;
@@ -23,7 +26,7 @@
     line-height: 17px;
     display: flex;
     align-items: center;
-    svg {
+    img {
       margin-left: 10px;
     }
   }

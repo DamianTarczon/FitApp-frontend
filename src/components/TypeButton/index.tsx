@@ -5,7 +5,7 @@ export default function TypeButton(props: any) {
   const noSelectedIcon: string = '/assets/icons/no-selected.svg'
 
     return (
-      <button className={props.selected ? "select-button selected" : "select-button"}>
+      <button className={props.selected ? "select-button button-selected" : "select-button"}>
         <span className="selected-icon"><img src={props.selected ? selectedIcon : noSelectedIcon}/></span>
         <span className="picture"><img src={props.icon}/></span>
         <div className="text">{props.text}</div>

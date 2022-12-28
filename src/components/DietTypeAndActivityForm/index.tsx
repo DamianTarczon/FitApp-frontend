@@ -12,11 +12,12 @@ export default function DietTypeAndActivityForm(props: any) {
             text={button.text}
             value={button.value}
             icon={button.icon}
-            trainings={button.trainings}
+            trainings={button.trainings.number}
         />
     });
 
     const selectedButton= props.data.filter((button: any) => button.selected)[0];
+    console.log(selectedButton.trainings.number)
     
     return(
         <div className='diet-type-form'>

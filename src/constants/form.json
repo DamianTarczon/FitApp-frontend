@@ -259,7 +259,10 @@
               "icon": "/assets/icons/activity/dumbbell-low.svg",
               "text": "Niska",
               "selected": true,
-              "trainings": "Brak treningów",
+              "trainings": {
+                "number": "Brak treningów",
+                "shortDescription": "Krótki opis"
+              },
               "description": {
                 "title": "Niska aktywność",
                 "description": "Jesteś leniuszkiem, który nie rusza swojego tyłka sprzed telewizora"
@@ -270,7 +273,10 @@
               "icon": "/assets/icons/activity/dumbbell-light.svg",
               "text": "Lekka",
               "selected": false,
-              "trainings": "1-2 treningi w tyg.",
+              "trainings": {
+                "number": "1-2 treningi w tyg.",
+                "shortDescription": "Krótki opis"
+              },
               "description": {
                 "title": "Lekka aktywność",
                 "description": "Jakiś randomowy tekst dla testów"
@@ -281,7 +287,10 @@
               "icon": "/assets/icons/activity/dumbbell-mid.svg",
               "text": "Średnia",
               "selected": false,
-              "trainings": "3-4 treningi w tyg.",
+              "trainings": {
+                "number": "3-4 treningi w tyg.",
+                "shortDescription": "Krótki opis"
+              },
               "description": {
                 "title": "Średnia aktywność",
                 "description": "Czyli wychodzi na to, że trenujesz 3-4 razy w tygodniu, a Twoja praca wymaga od Ciebie ruchu fizycznego"
@@ -292,7 +301,10 @@
               "icon": "/assets/icons/activity/dumbbell-high.svg",
               "text": "Wysoka",
               "selected": false,
-              "trainings": "4-5 treningi w tyg.",
+              "trainings": {
+                "number": "4-5 treningi w tyg.",
+                "shortDescription": "Krótki opis"
+              },
               "description": {
                 "title": "Wysoka aktywność",
                 "description": "Jakiś randomowy tekst dla testów"
@@ -303,7 +315,10 @@
               "icon": "/assets/icons/activity/dumbbells-very-high.svg",
               "text": "Bardzo wysoka",
               "selected": false,
-              "trainings": "5-7 treningi w tyg.",
+              "trainings": {
+                "number": "5-7 treningi w tyg.",
+                "shortDescription": "Krótki opis"
+              },
               "description": {
                 "title": "Bardzo wysoka aktywność",
                 "description": "Jakiś randomowy tekst dla testów"
@@ -314,7 +329,10 @@
               "icon": "/assets/icons/activity/dumbbells-extreme.svg",
               "text": "Ekstremalna",
               "selected": false,
-              "trainings": "+7 treningów w tyg.",
+              "trainings": {
+                "number": "+7 treningów w tyg.",
+                "short-description": "Krótki opis"
+              },
               "description": {
                 "title": "Ekstremalna aktywność",
                 "description": "Sportowy świr, dla którego niemożliwe nie istnieje"

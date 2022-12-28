@@ -1,14 +1,14 @@
-import { headsetIcon } from '../../utils/svg_icons';
 import './index.scss';
-import { headerTitle } from '../../utils/svg_icons';
 
 export default function Header() {
   return (
     <nav className="navbar">
       <a className="navbar-brand" href="/">
-        {headerTitle}
+        <img src="/assets/icons/title.svg"/>
       </a>
-      <button>{headsetIcon}</button>
+      <button>
+        <img src="/assets/icons/headset.svg"/>
+      </button>
     </nav>
   );
 }
