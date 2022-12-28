@@ -312,7 +312,7 @@
             },
             {
               "value": "Very high",
-              "icon": "/assets/icons/activity/dumbbells-very-high.svg",
+              "icon": "/assets/icons/activity/dumbbells-very-high.png",
               "text": "Bardzo wysoka",
               "selected": false,
               "trainings": {
@@ -326,7 +326,7 @@
             },
             {
               "value": "Extreme",
-              "icon": "/assets/icons/activity/dumbbells-extreme.svg",
+              "icon": "/assets/icons/activity/dumbbells-extreme.png",
               "text": "Ekstremalna",
               "selected": false,
               "trainings": {
