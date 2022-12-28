@@ -1,7 +1,7 @@
 import './index.scss';
-import { BigRadioSelector } from '..';
-import { MealNumberFormProps } from '../../services/interfaces';
-import { Title } from '..';
+import { BigRadioSelector } from '../..';
+import { MealNumberFormProps } from '../../../services/interfaces';
+import { Title } from '../..';
 
 export default function MealNumberForm(props: MealNumberFormProps) {
   const radioSelectors = props.data.map((button: any, index: any) => {

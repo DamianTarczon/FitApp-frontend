@@ -1,9 +1,9 @@
 import './index.scss';
-import { RadioSelector } from '../../components';
-import { GenderFormProps } from '../../services/interfaces';
-import { Title } from '../../components';
+import { RadioSelector } from '../..';
+import { DiseasesFormProps } from '../../../services/interfaces';
+import { Title } from '../..';
 
-export default function GenderForm(props: GenderFormProps) {
+export default function DiseasesForm(props: DiseasesFormProps) {
   const radioSelectors = props.data.map((button: any, index: any) => {
     return (
       <RadioSelector
@@ -13,14 +13,15 @@ export default function GenderForm(props: GenderFormProps) {
         selected={button.selected}
         text={button.text}
         value={button.value}
+        isLast={index===(props.data.length-1)}
       />
     );
   });
 
   return (
-    <form className="gender-form">
+    <form className="diseases-form">
       <Title title={props.title} />
-      <div className="gender-form-container">{radioSelectors}</div>
+      <div className="diseases-form-container">{radioSelectors}</div>
     </form>
   );
 }

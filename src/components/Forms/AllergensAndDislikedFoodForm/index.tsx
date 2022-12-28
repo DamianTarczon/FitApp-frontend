@@ -1,7 +1,7 @@
 import './index.scss';
-import { RadioSelector } from '..';
-import { AllergensFormProps } from '../../services/interfaces';
-import { Title } from '..';
+import { RadioSelector } from '../..';
+import { AllergensFormProps } from '../../../services/interfaces';
+import { Title } from '../..';
 
 export default function AllergensAndDislikedFoodForm(props: AllergensFormProps) {
   const radioSelectors = props.data.map((button: any, index: any) => {

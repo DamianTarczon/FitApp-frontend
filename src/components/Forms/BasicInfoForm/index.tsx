@@ -1,7 +1,7 @@
 import './index.scss';
-import { Selector } from '../../components';
-import { BasicInfoFormProps } from '../../services/interfaces';
-import { Title } from '../../components';
+import { Selector } from '../..';
+import { BasicInfoFormProps } from '../../../services/interfaces';
+import { Title } from '../..';
 
 export default function BasicInfoForm(props: BasicInfoFormProps) {
   const selectors = props.data.map((button: any, index: any) => {

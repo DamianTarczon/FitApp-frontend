@@ -1,8 +1,8 @@
 import './index.scss';
-import { Title } from '..'
-import { TypeButton } from ".."
-import { Description } from ".."
-import { ButtonProps, DietTypeAndActivityFormProps } from '../../services/interfaces';
+import { Title } from '../..'
+import { TypeButton } from "../.."
+import { Description } from "../.."
+import { ButtonProps, DietTypeAndActivityFormProps } from '../../../services/interfaces';
 
 export default function DietTypeAndActivityForm(props: DietTypeAndActivityFormProps) {
     const buttons = props.data.map((button: ButtonProps, index: number) => {
