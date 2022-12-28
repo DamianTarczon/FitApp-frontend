@@ -1,27 +1,22 @@
 @import '../../styles/config';
 
 .select-button{
-    width: 159px;
-    height: 120px;
+    // width: fit-content;
+    // height: fit-content;
     border-radius: 8px;
     background-color: $button-background;
     border: none;
-    display: inline;
+    display: flex;
+    flex-direction: column;
     margin: 7.5px;
-    .icon-with-select{
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        .icon{
-            margin-left: 40%;
-        }
-        .selected-icon{
-            margin-left: 25px;
-            margin-top: -15px;
-        }
+    align-items: center;
+    
+    .selected-icon{
+        margin-left: 130px;
+        margin-top: 5px;
     }
+
     .text{
-        display: inline-block;
         margin-top: 10px;
         font-family: $primary-font;
         font-style: normal;
@@ -29,10 +24,12 @@
         font-size: 16px;
         line-height: 19px;
     }
-    .trainings{
+    
+    .training{
         border: 1px solid $darker-white;
         border-radius: 20px;
         padding: 5px;
+        margin-top: 5px;
         font-family: $primary-font;
         font-style: normal;
         font-weight: 600;

@@ -6,12 +6,10 @@ export default function TypeButton(props: any) {
 
     return (
       <button className="select-button">
-        <div className='icon-with-select'>
-            <span className="icon"><img src={props.icon}/></span>
-            <span className="selected-icon"><img src={props.selected ? selectedIcon : noSelectedIcon}/></span>
-        </div>
+        <span className="selected-icon"><img src={props.selected ? selectedIcon : noSelectedIcon}/></span>
+        <span className="picture"><img src={props.icon}/></span>
         <div className="text">{props.text}</div>
-        {props.trainings && <div className={props.selected ? "trainings selected" : "trainings"}>{props.trainings}</div>}
+        {props.trainings && <div className={props.selected ? "training selected" : "training"}>{props.trainings}</div>}
       </button>
     );
   }
