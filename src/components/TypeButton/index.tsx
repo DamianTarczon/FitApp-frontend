@@ -1,6 +1,7 @@
+import { TypeButtonProps } from '../../services/interfaces';
 import './index.scss';
 
-export default function TypeButton(props: any) {
+export default function TypeButton(props: TypeButtonProps) {
   const selectedIcon: string = '/assets/icons/selected.svg'
   const noSelectedIcon: string = '/assets/icons/no-selected.svg'
 

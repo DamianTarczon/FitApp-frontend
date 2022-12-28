@@ -1,6 +1,7 @@
+import { DescriptionProps } from '../../services/interfaces';
 import './index.scss';
 
-export default function Description(props: any){
+export default function Description(props: DescriptionProps){
     return(
         <div className='description-div'>
             <div className='description-title'>{props.title}</div>
