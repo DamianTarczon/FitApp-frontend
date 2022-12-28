@@ -109,7 +109,7 @@
               "description": {
                 "title": "Dieta redukcyjna",
                 "video": "https://www.youtube.com/",
-                "description": "Zauważyłaś, że tu i ówdzie Ci sie przybyto? Nie mieścisz sie juz w swoje ulubione ciuchy wiec zastanawiasz sie jak bez wszelkich wyrzeczeń zrzucić zbędną tkankę tłuszczową? Nie martw sie, możesz na nas polegać!\n\nWybierz te opcje i zacznij drogę do wymarzonej sylwetki!"
+                "description": "Zauważyłaś, że tu i ówdzie Ci się przybyło? Nie mieścisz sie juz w swoje ulubione ciuchy wiec zastanawiasz sie jak bez wszelkich wyrzeczeń zrzucić zbędną tkankę tłuszczową? Nie martw sie, możesz na nas polegać!\n\nWybierz te opcje i zacznij drogę do wymarzonej sylwetki!"
               }
             },
             {
@@ -175,7 +175,7 @@
       "slug": "allergens",
       "children": [
         {
-          "name": "AllergensForm",
+          "name": "AllergensAndDislikedFoodForm",
           "title": "Wybierz alergeny",
           "description": "Czy cierpisz na alergie pokarmowe?",
           "data": [
@@ -359,7 +359,85 @@
           ]
         }
       ],
-      "next_step": "basic-info"
+      "next_step": "disliked-food"
+    },
+    {
+      "slug": "disliked-food",
+      "children": [
+        {
+          "name": "AllergensAndDislikedFoodForm",
+          "title": "Wybierz to czego nie lubisz",
+          "data": [
+            {
+              "value": "onion",
+              "icon": "/assets/icons/onion.svg",
+              "text": "Cebula",
+              "selected": true
+            },
+            {
+              "value": "leek",
+              "icon": "/assets/icons/leek.svg",
+              "text": "Por",
+              "selected": false
+            },
+            {
+              "value": "fish",
+              "icon": "/assets/icons/fish.svg",
+              "text": "Ryby",
+              "selected": false
+            },
+            {
+              "value": "seaFood",
+              "icon": "/assets/icons/sea-food.svg",
+              "text": "Owoce morza",
+              "selected": false
+            },
+            {
+              "value": "mango",
+              "icon": "/assets/icons/mango.svg",
+              "text": "Mango",
+              "selected": false
+            },
+            {
+              "value": "pumpkin",
+              "icon": "/assets/icons/pumpkin.svg",
+              "text": "Dynia",
+              "selected": false
+            },
+            {
+              "value": "buckwheatGroats",
+              "icon": "/assets/icons/buckwheat-groats.svg",
+              "text": "Kasza gryczana",
+              "selected": false
+            },
+            {
+              "value": "olives",
+              "icon": "/assets/icons/olives.svg",
+              "text": "Oliwki",
+              "selected": false
+            },
+            {
+              "value": "sprouts",
+              "icon": "/assets/icons/sprouts.svg",
+              "text": "Kiełki",
+              "selected": false
+            },
+            {
+              "value": "avocado",
+              "icon": "/assets/icons/avocado.svg",
+              "text": "Awokado",
+              "selected": false
+            },
+            {
+              "value": "no_products",
+              "icon": "/assets/icons/cross.svg",
+              "text": "Brak produktów",
+              "selected": false
+            }
+          ]
+        }
+      ],
+      "next_step": "diseases"
     },
     {
       "slug": "diseases",

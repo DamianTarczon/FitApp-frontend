@@ -4,7 +4,7 @@
     // width: fit-content;
     // height: fit-content;
     border-radius: 8px;
-    background-color: $button-background;
+    background-color: $white;
     border: none;
     display: flex;
     flex-direction: column;
@@ -37,9 +37,12 @@
         line-height: 12px;
         color: $grey;
     }
+}
 
-    .selected{
-        background-color: $green;
-        color: $white;
+.selected{
+    background-color: $button-background;
+    .training{
+    background-color: $green;
+    color: $white;
     }
 }

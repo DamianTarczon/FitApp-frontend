@@ -13,7 +13,7 @@ import Title from './Title';
 import Selector from './Selector';
 import DietTypeAndActivityForm from './DietTypeAndActivityForm';
 import Description from './Description';
-import AllergensForm from './AllergensForm';
+import AllergensAndDislikedFoodForm from './AllergensAndDislikedFoodForm';
 import TypeButton from "./TypeButton";
 import BigRadioSelector from './BigRadioSelector';
 import MealNumberForm from './MealNumberForm';
@@ -35,7 +35,7 @@ export {
   Selector,
   DietTypeAndActivityForm,
   Description,
-  AllergensForm,
+  AllergensAndDislikedFoodForm,
   TypeButton,
   BigRadioSelector,
   MealNumberForm,

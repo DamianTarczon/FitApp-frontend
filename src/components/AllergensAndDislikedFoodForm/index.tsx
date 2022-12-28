@@ -3,7 +3,7 @@ import { RadioSelector } from '..';
 import { AllergensFormProps } from '../../services/interfaces';
 import { Title } from '..';
 
-export default function AllergensForm(props: AllergensFormProps) {
+export default function AllergensAndDislikedFoodForm(props: AllergensFormProps) {
   const radioSelectors = props.data.map((button: any, index: any) => {
     return (
       <RadioSelector
@@ -21,7 +21,7 @@ export default function AllergensForm(props: AllergensFormProps) {
   return (
     <form className="allergen-form">
       <Title title={props.title} />
-      <div className="description">{props.description}</div>
+      {props.description && <div className="description">{props.description}</div>}
       <div className="allergen-form-container">{radioSelectors}</div>
     </form>
   );
