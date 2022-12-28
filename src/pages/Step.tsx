@@ -6,7 +6,6 @@ import * as Components from '../components';
 import { FormContainer, Header, StepBar, StepHeader } from '../components';
 export default function Step() {
   const { step } = useParams();
-  console.log(step);
   let currentStep;
   for (let i = 0; i < form.steps.length; i++) {
     if (form.steps[i].slug === step) {
@@ -14,12 +13,13 @@ export default function Step() {
     }
   }
   if (currentStep) {
-    let content = currentStep.children.map((child) => {
+    let content = currentStep.children.map((child, index) => {
       //@ts-ignore
       const Component = Components[child.name];
       if (Component) {
-        return <Component {...child} />;
+        return <Component key={index} {...child} />;
       }
+      return null;
     });
     let buttonsProps = form.stepsInfo.buttons;
 

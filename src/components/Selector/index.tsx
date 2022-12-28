@@ -2,9 +2,9 @@ import './index.scss';
 import { SelectorProps } from '../../services/interfaces';
 
 export default function Selector(props: SelectorProps) {
-  const options = props.values.map((v) => {
+  const options = props.values.map((v,index) => {
     return (
-      <option value={v}>
+      <option key={index} value={v}>
         {v} {props.unit}
       </option>
     );

@@ -10,7 +10,7 @@ export default function Description(props: any){
             {props.video && 
             <>
                 <br/>
-                <a href={props.video}><img src="/assets/icons/film.svg" />Zobacz video</a>
+                <a href={props.video}><img src="/assets/icons/film.svg" alt={props.text}/>Zobacz video</a>
             </>}
             {props.trainings && 
             <div className='training-description'>

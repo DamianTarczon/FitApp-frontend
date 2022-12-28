@@ -6,8 +6,8 @@ export default function TypeButton(props: any) {
 
     return (
       <button className={props.selected ? "select-button button-selected" : "select-button"}>
-        <span className="selected-icon"><img src={props.selected ? selectedIcon : noSelectedIcon}/></span>
-        <span className="picture"><img src={props.icon}/></span>
+        <span className="selected-icon"><img src={props.selected ? selectedIcon : noSelectedIcon} alt="select-icon"/></span>
+        <span className="picture"><img src={props.icon} alt={props.icon}/></span>
         <div className="text">{props.text}</div>
         {props.trainings && <div className="training">{props.trainings.number}</div>}
       </button>
